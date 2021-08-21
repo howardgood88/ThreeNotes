@@ -1,4 +1,4 @@
-# Figa
+# ThreeNotes
 ## Features
 1. View the component notes of and chord.
 
