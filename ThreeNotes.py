@@ -12,13 +12,21 @@ from pychord import note_to_chord
 
 STRING_NUM = 6
 NOTE_PER_STRING = 12
-OPEN_STRING_NOTE_NAME = {1:'E4', 2:'B3',
-                        3:'G3', 4:'D3',
-                        5:'A2', 6:'E2'}
+OPEN_STRING_NOTE_NAME = {
+        1:{'noteName':'E', 'pitchNum':4},
+        2:{'noteName':'B', 'pitchNum':3},
+        3:{'noteName':'G', 'pitchNum':3},
+        4:{'noteName':'D', 'pitchNum':3},
+        5:{'noteName':'A', 'pitchNum':2},
+        6:{'noteName':'E', 'pitchNum':2},
+    }
 
 class Ui_MainWindow(object):
     def __init__(self):
-        self.component_notes = OPEN_STRING_NOTE_NAME.copy()
+        self.component_notes = {
+            1:'E', 2:'B', 3:'G',
+            4:'D', 5:'A', 6:'E'
+        }
         self.string_muted = {i:False for i in range(1, STRING_NUM + 1)}
 
     def setupUi(self, MainWindow):
@@ -1705,7 +1713,8 @@ class Ui_MainWindow(object):
         self.label_1.setPixmap(QtGui.QPixmap("dot.png"))
         self.label_1.setScaledContents(True)
         self.label_1.setObjectName("label_1")
-        self.label_1.noteName = 'F4'
+        self.label_1.noteName = 'F'
+        self.label_1.pitchNum = 4
         self.label_2 = QtWidgets.QLabel(self.centralwidget)
         self.label_2.setEnabled(True)
         self.label_2.setGeometry(QtCore.QRect(190, 170, 21, 21))
@@ -1713,7 +1722,8 @@ class Ui_MainWindow(object):
         self.label_2.setPixmap(QtGui.QPixmap("dot.png"))
         self.label_2.setScaledContents(True)
         self.label_2.setObjectName("label_2")
-        self.label_2.noteName = 'F#4'
+        self.label_2.noteName = 'F#'
+        self.label_2.pitchNum = 4
         self.label_3 = QtWidgets.QLabel(self.centralwidget)
         self.label_3.setEnabled(True)
         self.label_3.setGeometry(QtCore.QRect(250, 170, 21, 21))
@@ -1721,7 +1731,8 @@ class Ui_MainWindow(object):
         self.label_3.setPixmap(QtGui.QPixmap("dot.png"))
         self.label_3.setScaledContents(True)
         self.label_3.setObjectName("label_3")
-        self.label_3.noteName = 'G4'
+        self.label_3.noteName = 'G'
+        self.label_3.pitchNum = 4
         self.label_4 = QtWidgets.QLabel(self.centralwidget)
         self.label_4.setEnabled(True)
         self.label_4.setGeometry(QtCore.QRect(310, 170, 21, 21))
@@ -1730,6 +1741,7 @@ class Ui_MainWindow(object):
         self.label_4.setScaledContents(True)
         self.label_4.setObjectName("label_4")
         self.label_4.noteName = 'G#4'
+        self.label_4.pitchNum = 4
         self.label_5 = QtWidgets.QLabel(self.centralwidget)
         self.label_5.setEnabled(True)
         self.label_5.setGeometry(QtCore.QRect(360, 170, 21, 21))
@@ -1737,7 +1749,8 @@ class Ui_MainWindow(object):
         self.label_5.setPixmap(QtGui.QPixmap("dot.png"))
         self.label_5.setScaledContents(True)
         self.label_5.setObjectName("label_5")
-        self.label_5.noteName = 'A4'
+        self.label_5.noteName = 'A'
+        self.label_5.pitchNum = 4
         self.label_6 = QtWidgets.QLabel(self.centralwidget)
         self.label_6.setEnabled(True)
         self.label_6.setGeometry(QtCore.QRect(410, 170, 21, 21))
@@ -1745,7 +1758,8 @@ class Ui_MainWindow(object):
         self.label_6.setPixmap(QtGui.QPixmap("dot.png"))
         self.label_6.setScaledContents(True)
         self.label_6.setObjectName("label_6")
-        self.label_6.noteName = 'A#4'
+        self.label_6.noteName = 'A#'
+        self.label_6.pitchNum = 4
         self.label_7 = QtWidgets.QLabel(self.centralwidget)
         self.label_7.setEnabled(True)
         self.label_7.setGeometry(QtCore.QRect(460, 170, 21, 21))
@@ -1753,7 +1767,8 @@ class Ui_MainWindow(object):
         self.label_7.setPixmap(QtGui.QPixmap("dot.png"))
         self.label_7.setScaledContents(True)
         self.label_7.setObjectName("label_7")
-        self.label_7.noteName = 'B4'
+        self.label_7.noteName = 'B'
+        self.label_7.pitchNum = 4
         self.label_8 = QtWidgets.QLabel(self.centralwidget)
         self.label_8.setEnabled(True)
         self.label_8.setGeometry(QtCore.QRect(510, 170, 21, 21))
@@ -1761,7 +1776,8 @@ class Ui_MainWindow(object):
         self.label_8.setPixmap(QtGui.QPixmap("dot.png"))
         self.label_8.setScaledContents(True)
         self.label_8.setObjectName("label_8")
-        self.label_8.noteName = 'C5'
+        self.label_8.noteName = 'C'
+        self.label_8.pitchNum = 5
         self.label_9 = QtWidgets.QLabel(self.centralwidget)
         self.label_9.setEnabled(True)
         self.label_9.setGeometry(QtCore.QRect(560, 170, 21, 21))
@@ -1769,7 +1785,8 @@ class Ui_MainWindow(object):
         self.label_9.setPixmap(QtGui.QPixmap("dot.png"))
         self.label_9.setScaledContents(True)
         self.label_9.setObjectName("label_9")
-        self.label_9.noteName = 'C#5'
+        self.label_9.noteName = 'C#'
+        self.label_9.pitchNum = 5
         self.label_10 = QtWidgets.QLabel(self.centralwidget)
         self.label_10.setEnabled(True)
         self.label_10.setGeometry(QtCore.QRect(600, 170, 21, 21))
@@ -1777,7 +1794,8 @@ class Ui_MainWindow(object):
         self.label_10.setPixmap(QtGui.QPixmap("dot.png"))
         self.label_10.setScaledContents(True)
         self.label_10.setObjectName("label_10")
-        self.label_10.noteName = 'D5'
+        self.label_10.noteName = 'D'
+        self.label_10.pitchNum = 5
         self.label_11 = QtWidgets.QLabel(self.centralwidget)
         self.label_11.setEnabled(True)
         self.label_11.setGeometry(QtCore.QRect(640, 170, 21, 21))
@@ -1785,7 +1803,8 @@ class Ui_MainWindow(object):
         self.label_11.setPixmap(QtGui.QPixmap("dot.png"))
         self.label_11.setScaledContents(True)
         self.label_11.setObjectName("label_11")
-        self.label_11.noteName = 'D#5'
+        self.label_11.noteName = 'D#'
+        self.label_11.pitchNum = 5
         self.label_12 = QtWidgets.QLabel(self.centralwidget)
         self.label_12.setEnabled(True)
         self.label_12.setGeometry(QtCore.QRect(680, 170, 21, 21))
@@ -1793,7 +1812,8 @@ class Ui_MainWindow(object):
         self.label_12.setPixmap(QtGui.QPixmap("dot.png"))
         self.label_12.setScaledContents(True)
         self.label_12.setObjectName("label_12")
-        self.label_12.noteName = 'E5'
+        self.label_12.noteName = 'E'
+        self.label_12.pitchNum = 5
         self.label_13 = QtWidgets.QLabel(self.centralwidget)
         self.label_13.setEnabled(True)
         self.label_13.setGeometry(QtCore.QRect(130, 210, 21, 21))
@@ -1801,7 +1821,8 @@ class Ui_MainWindow(object):
         self.label_13.setPixmap(QtGui.QPixmap("dot.png"))
         self.label_13.setScaledContents(True)
         self.label_13.setObjectName("label_13")
-        self.label_13.noteName = 'C4'
+        self.label_13.noteName = 'C'
+        self.label_13.pitchNum = 4
         self.label_14 = QtWidgets.QLabel(self.centralwidget)
         self.label_14.setEnabled(True)
         self.label_14.setGeometry(QtCore.QRect(190, 210, 21, 21))
@@ -1809,7 +1830,8 @@ class Ui_MainWindow(object):
         self.label_14.setPixmap(QtGui.QPixmap("dot.png"))
         self.label_14.setScaledContents(True)
         self.label_14.setObjectName("label_14")
-        self.label_14.noteName = 'C#4'
+        self.label_14.noteName = 'C#'
+        self.label_14.pitchNum = 4
         self.label_15 = QtWidgets.QLabel(self.centralwidget)
         self.label_15.setEnabled(True)
         self.label_15.setGeometry(QtCore.QRect(250, 210, 21, 21))
@@ -1817,7 +1839,8 @@ class Ui_MainWindow(object):
         self.label_15.setPixmap(QtGui.QPixmap("dot.png"))
         self.label_15.setScaledContents(True)
         self.label_15.setObjectName("label_15")
-        self.label_15.noteName = 'D4'
+        self.label_15.noteName = 'D'
+        self.label_15.pitchNum = 4
         self.label_16 = QtWidgets.QLabel(self.centralwidget)
         self.label_16.setEnabled(True)
         self.label_16.setGeometry(QtCore.QRect(310, 210, 21, 21))
@@ -1825,7 +1848,8 @@ class Ui_MainWindow(object):
         self.label_16.setPixmap(QtGui.QPixmap("dot.png"))
         self.label_16.setScaledContents(True)
         self.label_16.setObjectName("label_16")
-        self.label_16.noteName = 'D#4'
+        self.label_16.noteName = 'D#'
+        self.label_16.pitchNum = 4
         self.label_17 = QtWidgets.QLabel(self.centralwidget)
         self.label_17.setEnabled(True)
         self.label_17.setGeometry(QtCore.QRect(360, 210, 21, 21))
@@ -1833,7 +1857,8 @@ class Ui_MainWindow(object):
         self.label_17.setPixmap(QtGui.QPixmap("dot.png"))
         self.label_17.setScaledContents(True)
         self.label_17.setObjectName("label_17")
-        self.label_17.noteName = 'E4'
+        self.label_17.noteName = 'E'
+        self.label_17.pitchNum = 4
         self.label_18 = QtWidgets.QLabel(self.centralwidget)
         self.label_18.setEnabled(True)
         self.label_18.setGeometry(QtCore.QRect(410, 210, 21, 21))
@@ -1841,7 +1866,8 @@ class Ui_MainWindow(object):
         self.label_18.setPixmap(QtGui.QPixmap("dot.png"))
         self.label_18.setScaledContents(True)
         self.label_18.setObjectName("label_18")
-        self.label_18.noteName = 'F4'
+        self.label_18.noteName = 'F'
+        self.label_18.pitchNum = 4
         self.label_19 = QtWidgets.QLabel(self.centralwidget)
         self.label_19.setEnabled(True)
         self.label_19.setGeometry(QtCore.QRect(460, 210, 21, 21))
@@ -1849,7 +1875,8 @@ class Ui_MainWindow(object):
         self.label_19.setPixmap(QtGui.QPixmap("dot.png"))
         self.label_19.setScaledContents(True)
         self.label_19.setObjectName("label_19")
-        self.label_19.noteName = 'F#4'
+        self.label_19.noteName = 'F#'
+        self.label_19.pitchNum = 4
         self.label_20 = QtWidgets.QLabel(self.centralwidget)
         self.label_20.setEnabled(True)
         self.label_20.setGeometry(QtCore.QRect(510, 210, 21, 21))
@@ -1857,7 +1884,8 @@ class Ui_MainWindow(object):
         self.label_20.setPixmap(QtGui.QPixmap("dot.png"))
         self.label_20.setScaledContents(True)
         self.label_20.setObjectName("label_20")
-        self.label_20.noteName = 'G4'
+        self.label_20.noteName = 'G'
+        self.label_20.pitchNum = 4
         self.label_21 = QtWidgets.QLabel(self.centralwidget)
         self.label_21.setEnabled(True)
         self.label_21.setGeometry(QtCore.QRect(560, 210, 21, 21))
@@ -1865,7 +1893,8 @@ class Ui_MainWindow(object):
         self.label_21.setPixmap(QtGui.QPixmap("dot.png"))
         self.label_21.setScaledContents(True)
         self.label_21.setObjectName("label_21")
-        self.label_21.noteName = 'G#4'
+        self.label_21.noteName = 'G#'
+        self.label_21.pitchNum = 4
         self.label_22 = QtWidgets.QLabel(self.centralwidget)
         self.label_22.setEnabled(True)
         self.label_22.setGeometry(QtCore.QRect(600, 210, 21, 21))
@@ -1873,7 +1902,8 @@ class Ui_MainWindow(object):
         self.label_22.setPixmap(QtGui.QPixmap("dot.png"))
         self.label_22.setScaledContents(True)
         self.label_22.setObjectName("label_22")
-        self.label_22.noteName = 'A4'
+        self.label_22.noteName = 'A'
+        self.label_22.pitchNum = 4
         self.label_23 = QtWidgets.QLabel(self.centralwidget)
         self.label_23.setEnabled(True)
         self.label_23.setGeometry(QtCore.QRect(640, 210, 21, 21))
@@ -1881,7 +1911,8 @@ class Ui_MainWindow(object):
         self.label_23.setPixmap(QtGui.QPixmap("dot.png"))
         self.label_23.setScaledContents(True)
         self.label_23.setObjectName("label_23")
-        self.label_23.noteName = 'A#4'
+        self.label_23.noteName = 'A#'
+        self.label_23.pitchNum = 4
         self.label_24 = QtWidgets.QLabel(self.centralwidget)
         self.label_24.setEnabled(True)
         self.label_24.setGeometry(QtCore.QRect(680, 210, 21, 21))
@@ -1889,7 +1920,8 @@ class Ui_MainWindow(object):
         self.label_24.setPixmap(QtGui.QPixmap("dot.png"))
         self.label_24.setScaledContents(True)
         self.label_24.setObjectName("label_24")
-        self.label_24.noteName = 'B4'
+        self.label_24.noteName = 'B'
+        self.label_24.pitchNum = 4
         self.label_25 = QtWidgets.QLabel(self.centralwidget)
         self.label_25.setEnabled(True)
         self.label_25.setGeometry(QtCore.QRect(130, 250, 21, 21))
@@ -1897,7 +1929,8 @@ class Ui_MainWindow(object):
         self.label_25.setPixmap(QtGui.QPixmap("dot.png"))
         self.label_25.setScaledContents(True)
         self.label_25.setObjectName("label_25")
-        self.label_25.noteName = 'G#3'
+        self.label_25.noteName = 'G#'
+        self.label_25.pitchNum = 3
         self.label_26 = QtWidgets.QLabel(self.centralwidget)
         self.label_26.setEnabled(True)
         self.label_26.setGeometry(QtCore.QRect(190, 250, 21, 21))
@@ -1905,7 +1938,8 @@ class Ui_MainWindow(object):
         self.label_26.setPixmap(QtGui.QPixmap("dot.png"))
         self.label_26.setScaledContents(True)
         self.label_26.setObjectName("label_26")
-        self.label_26.noteName = 'A3'
+        self.label_26.noteName = 'A'
+        self.label_26.pitchNum = 3
         self.label_27 = QtWidgets.QLabel(self.centralwidget)
         self.label_27.setEnabled(True)
         self.label_27.setGeometry(QtCore.QRect(250, 250, 21, 21))
@@ -1913,7 +1947,8 @@ class Ui_MainWindow(object):
         self.label_27.setPixmap(QtGui.QPixmap("dot.png"))
         self.label_27.setScaledContents(True)
         self.label_27.setObjectName("label_27")
-        self.label_27.noteName = 'A#3'
+        self.label_27.noteName = 'A#'
+        self.label_27.pitchNum = 3
         self.label_28 = QtWidgets.QLabel(self.centralwidget)
         self.label_28.setEnabled(True)
         self.label_28.setGeometry(QtCore.QRect(310, 250, 21, 21))
@@ -1922,6 +1957,7 @@ class Ui_MainWindow(object):
         self.label_28.setScaledContents(True)
         self.label_28.setObjectName("label_28")
         self.label_28.noteName = 'B3'
+        self.label_28.pitchNum = 3
         self.label_29 = QtWidgets.QLabel(self.centralwidget)
         self.label_29.setEnabled(True)
         self.label_29.setGeometry(QtCore.QRect(360, 250, 21, 21))
@@ -1929,7 +1965,8 @@ class Ui_MainWindow(object):
         self.label_29.setPixmap(QtGui.QPixmap("dot.png"))
         self.label_29.setScaledContents(True)
         self.label_29.setObjectName("label_29")
-        self.label_29.noteName = 'C4'
+        self.label_29.noteName = 'C'
+        self.label_29.pitchNum = 4
         self.label_30 = QtWidgets.QLabel(self.centralwidget)
         self.label_30.setEnabled(True)
         self.label_30.setGeometry(QtCore.QRect(410, 250, 21, 21))
@@ -1937,7 +1974,8 @@ class Ui_MainWindow(object):
         self.label_30.setPixmap(QtGui.QPixmap("dot.png"))
         self.label_30.setScaledContents(True)
         self.label_30.setObjectName("label_30")
-        self.label_30.noteName = 'C#4'
+        self.label_30.noteName = 'C#'
+        self.label_30.pitchNum = 4
         self.label_31 = QtWidgets.QLabel(self.centralwidget)
         self.label_31.setEnabled(True)
         self.label_31.setGeometry(QtCore.QRect(460, 250, 21, 21))
@@ -1945,7 +1983,8 @@ class Ui_MainWindow(object):
         self.label_31.setPixmap(QtGui.QPixmap("dot.png"))
         self.label_31.setScaledContents(True)
         self.label_31.setObjectName("label_31")
-        self.label_31.noteName = 'D4'
+        self.label_31.noteName = 'D'
+        self.label_31.pitchNum = 4
         self.label_32 = QtWidgets.QLabel(self.centralwidget)
         self.label_32.setEnabled(True)
         self.label_32.setGeometry(QtCore.QRect(510, 250, 21, 21))
@@ -1953,7 +1992,8 @@ class Ui_MainWindow(object):
         self.label_32.setPixmap(QtGui.QPixmap("dot.png"))
         self.label_32.setScaledContents(True)
         self.label_32.setObjectName("label_32")
-        self.label_32.noteName = 'D#4'
+        self.label_32.noteName = 'D#'
+        self.label_32.pitchNum = 4
         self.label_33 = QtWidgets.QLabel(self.centralwidget)
         self.label_33.setEnabled(True)
         self.label_33.setGeometry(QtCore.QRect(560, 250, 21, 21))
@@ -1961,7 +2001,8 @@ class Ui_MainWindow(object):
         self.label_33.setPixmap(QtGui.QPixmap("dot.png"))
         self.label_33.setScaledContents(True)
         self.label_33.setObjectName("label_33")
-        self.label_33.noteName = 'E4'
+        self.label_33.noteName = 'E'
+        self.label_33.pitchNum = 4
         self.label_34 = QtWidgets.QLabel(self.centralwidget)
         self.label_34.setEnabled(True)
         self.label_34.setGeometry(QtCore.QRect(600, 250, 21, 21))
@@ -1969,7 +2010,8 @@ class Ui_MainWindow(object):
         self.label_34.setPixmap(QtGui.QPixmap("dot.png"))
         self.label_34.setScaledContents(True)
         self.label_34.setObjectName("label_34")
-        self.label_34.noteName = 'F4'
+        self.label_34.noteName = 'F'
+        self.label_34.pitchNum = 4
         self.label_35 = QtWidgets.QLabel(self.centralwidget)
         self.label_35.setEnabled(True)
         self.label_35.setGeometry(QtCore.QRect(640, 250, 21, 21))
@@ -1977,7 +2019,8 @@ class Ui_MainWindow(object):
         self.label_35.setPixmap(QtGui.QPixmap("dot.png"))
         self.label_35.setScaledContents(True)
         self.label_35.setObjectName("label_35")
-        self.label_35.noteName = 'F#4'
+        self.label_35.noteName = 'F#'
+        self.label_35.pitchNum = 4
         self.label_36 = QtWidgets.QLabel(self.centralwidget)
         self.label_36.setEnabled(True)
         self.label_36.setGeometry(QtCore.QRect(680, 250, 21, 21))
@@ -1985,7 +2028,8 @@ class Ui_MainWindow(object):
         self.label_36.setPixmap(QtGui.QPixmap("dot.png"))
         self.label_36.setScaledContents(True)
         self.label_36.setObjectName("label_36")
-        self.label_36.noteName = 'G4'
+        self.label_36.noteName = 'G'
+        self.label_36.pitchNum = 4
         self.label_37 = QtWidgets.QLabel(self.centralwidget)
         self.label_37.setEnabled(True)
         self.label_37.setGeometry(QtCore.QRect(130, 290, 21, 21))
@@ -1993,7 +2037,8 @@ class Ui_MainWindow(object):
         self.label_37.setPixmap(QtGui.QPixmap("dot.png"))
         self.label_37.setScaledContents(True)
         self.label_37.setObjectName("label_37")
-        self.label_37.noteName = 'D#3'
+        self.label_37.noteName = 'D#'
+        self.label_37.pitchNum = 3
         self.label_38 = QtWidgets.QLabel(self.centralwidget)
         self.label_38.setEnabled(True)
         self.label_38.setGeometry(QtCore.QRect(190, 290, 21, 21))
@@ -2001,7 +2046,8 @@ class Ui_MainWindow(object):
         self.label_38.setPixmap(QtGui.QPixmap("dot.png"))
         self.label_38.setScaledContents(True)
         self.label_38.setObjectName("label_38")
-        self.label_38.noteName = 'E3'
+        self.label_38.noteName = 'E'
+        self.label_38.pitchNum = 3
         self.label_39 = QtWidgets.QLabel(self.centralwidget)
         self.label_39.setEnabled(True)
         self.label_39.setGeometry(QtCore.QRect(250, 290, 21, 21))
@@ -2009,7 +2055,8 @@ class Ui_MainWindow(object):
         self.label_39.setPixmap(QtGui.QPixmap("dot.png"))
         self.label_39.setScaledContents(True)
         self.label_39.setObjectName("label_39")
-        self.label_39.noteName = 'F3'
+        self.label_39.noteName = 'F'
+        self.label_39.pitchNum = 3
         self.label_40 = QtWidgets.QLabel(self.centralwidget)
         self.label_40.setEnabled(True)
         self.label_40.setGeometry(QtCore.QRect(310, 290, 21, 21))
@@ -2017,7 +2064,8 @@ class Ui_MainWindow(object):
         self.label_40.setPixmap(QtGui.QPixmap("dot.png"))
         self.label_40.setScaledContents(True)
         self.label_40.setObjectName("label_40")
-        self.label_40.noteName = 'F#3'
+        self.label_40.noteName = 'F#'
+        self.label_40.pitchNum = 3
         self.label_41 = QtWidgets.QLabel(self.centralwidget)
         self.label_41.setEnabled(True)
         self.label_41.setGeometry(QtCore.QRect(360, 290, 21, 21))
@@ -2025,7 +2073,8 @@ class Ui_MainWindow(object):
         self.label_41.setPixmap(QtGui.QPixmap("dot.png"))
         self.label_41.setScaledContents(True)
         self.label_41.setObjectName("label_41")
-        self.label_41.noteName = 'G3'
+        self.label_41.noteName = 'G'
+        self.label_41.pitchNum = 3
         self.label_42 = QtWidgets.QLabel(self.centralwidget)
         self.label_42.setEnabled(True)
         self.label_42.setGeometry(QtCore.QRect(410, 290, 21, 21))
@@ -2033,7 +2082,8 @@ class Ui_MainWindow(object):
         self.label_42.setPixmap(QtGui.QPixmap("dot.png"))
         self.label_42.setScaledContents(True)
         self.label_42.setObjectName("label_42")
-        self.label_42.noteName = 'G#3'
+        self.label_42.noteName = 'G#'
+        self.label_42.pitchNum = 3
         self.label_43 = QtWidgets.QLabel(self.centralwidget)
         self.label_43.setEnabled(True)
         self.label_43.setGeometry(QtCore.QRect(460, 290, 21, 21))
@@ -2041,7 +2091,8 @@ class Ui_MainWindow(object):
         self.label_43.setPixmap(QtGui.QPixmap("dot.png"))
         self.label_43.setScaledContents(True)
         self.label_43.setObjectName("label_43")
-        self.label_43.noteName = 'A3'
+        self.label_43.noteName = 'A'
+        self.label_43.pitchNum = 3
         self.label_44 = QtWidgets.QLabel(self.centralwidget)
         self.label_44.setEnabled(True)
         self.label_44.setGeometry(QtCore.QRect(510, 290, 21, 21))
@@ -2049,7 +2100,8 @@ class Ui_MainWindow(object):
         self.label_44.setPixmap(QtGui.QPixmap("dot.png"))
         self.label_44.setScaledContents(True)
         self.label_44.setObjectName("label_44")
-        self.label_44.noteName = 'A#3'
+        self.label_44.noteName = 'A#'
+        self.label_44.pitchNum = 3
         self.label_45 = QtWidgets.QLabel(self.centralwidget)
         self.label_45.setEnabled(True)
         self.label_45.setGeometry(QtCore.QRect(560, 290, 21, 21))
@@ -2057,7 +2109,8 @@ class Ui_MainWindow(object):
         self.label_45.setPixmap(QtGui.QPixmap("dot.png"))
         self.label_45.setScaledContents(True)
         self.label_45.setObjectName("label_45")
-        self.label_45.noteName = 'B3'
+        self.label_45.noteName = 'B'
+        self.label_45.pitchNum = 3
         self.label_46 = QtWidgets.QLabel(self.centralwidget)
         self.label_46.setEnabled(True)
         self.label_46.setGeometry(QtCore.QRect(600, 290, 21, 21))
@@ -2065,7 +2118,8 @@ class Ui_MainWindow(object):
         self.label_46.setPixmap(QtGui.QPixmap("dot.png"))
         self.label_46.setScaledContents(True)
         self.label_46.setObjectName("label_46")
-        self.label_46.noteName = 'C4'
+        self.label_46.noteName = 'C'
+        self.label_46.pitchNum = 4
         self.label_47 = QtWidgets.QLabel(self.centralwidget)
         self.label_47.setEnabled(True)
         self.label_47.setGeometry(QtCore.QRect(640, 290, 21, 21))
@@ -2073,7 +2127,8 @@ class Ui_MainWindow(object):
         self.label_47.setPixmap(QtGui.QPixmap("dot.png"))
         self.label_47.setScaledContents(True)
         self.label_47.setObjectName("label_47")
-        self.label_47.noteName = 'C#4'
+        self.label_47.noteName = 'C#'
+        self.label_47.pitchNum = 4
         self.label_48 = QtWidgets.QLabel(self.centralwidget)
         self.label_48.setEnabled(True)
         self.label_48.setGeometry(QtCore.QRect(680, 290, 21, 21))
@@ -2081,7 +2136,8 @@ class Ui_MainWindow(object):
         self.label_48.setPixmap(QtGui.QPixmap("dot.png"))
         self.label_48.setScaledContents(True)
         self.label_48.setObjectName("label_48")
-        self.label_48.noteName = 'D4'
+        self.label_48.noteName = 'D'
+        self.label_48.pitchNum = 4
         self.label_49 = QtWidgets.QLabel(self.centralwidget)
         self.label_49.setEnabled(True)
         self.label_49.setGeometry(QtCore.QRect(130, 330, 21, 21))
@@ -2089,7 +2145,8 @@ class Ui_MainWindow(object):
         self.label_49.setPixmap(QtGui.QPixmap("dot.png"))
         self.label_49.setScaledContents(True)
         self.label_49.setObjectName("label_49")
-        self.label_49.noteName = 'A#2'
+        self.label_49.noteName = 'A#'
+        self.label_49.pitchNum = 2
         self.label_50 = QtWidgets.QLabel(self.centralwidget)
         self.label_50.setEnabled(True)
         self.label_50.setGeometry(QtCore.QRect(190, 330, 21, 21))
@@ -2097,7 +2154,8 @@ class Ui_MainWindow(object):
         self.label_50.setPixmap(QtGui.QPixmap("dot.png"))
         self.label_50.setScaledContents(True)
         self.label_50.setObjectName("label_50")
-        self.label_50.noteName = 'B2'
+        self.label_50.noteName = 'B'
+        self.label_50.pitchNum = 2
         self.label_51 = QtWidgets.QLabel(self.centralwidget)
         self.label_51.setEnabled(True)
         self.label_51.setGeometry(QtCore.QRect(250, 330, 21, 21))
@@ -2105,7 +2163,8 @@ class Ui_MainWindow(object):
         self.label_51.setPixmap(QtGui.QPixmap("dot.png"))
         self.label_51.setScaledContents(True)
         self.label_51.setObjectName("label_51")
-        self.label_51.noteName = 'C3'
+        self.label_51.noteName = 'C'
+        self.label_51.pitchNum = 3
         self.label_52 = QtWidgets.QLabel(self.centralwidget)
         self.label_52.setEnabled(True)
         self.label_52.setGeometry(QtCore.QRect(310, 330, 21, 21))
@@ -2113,7 +2172,8 @@ class Ui_MainWindow(object):
         self.label_52.setPixmap(QtGui.QPixmap("dot.png"))
         self.label_52.setScaledContents(True)
         self.label_52.setObjectName("label_52")
-        self.label_52.noteName = 'C#3'
+        self.label_52.noteName = 'C#'
+        self.label_52.pitchNum = 3
         self.label_53 = QtWidgets.QLabel(self.centralwidget)
         self.label_53.setEnabled(True)
         self.label_53.setGeometry(QtCore.QRect(360, 330, 21, 21))
@@ -2121,7 +2181,8 @@ class Ui_MainWindow(object):
         self.label_53.setPixmap(QtGui.QPixmap("dot.png"))
         self.label_53.setScaledContents(True)
         self.label_53.setObjectName("label_53")
-        self.label_53.noteName = 'D3'
+        self.label_53.noteName = 'D'
+        self.label_53.pitchNum = 3
         self.label_54 = QtWidgets.QLabel(self.centralwidget)
         self.label_54.setEnabled(True)
         self.label_54.setGeometry(QtCore.QRect(410, 330, 21, 21))
@@ -2129,7 +2190,8 @@ class Ui_MainWindow(object):
         self.label_54.setPixmap(QtGui.QPixmap("dot.png"))
         self.label_54.setScaledContents(True)
         self.label_54.setObjectName("label_54")
-        self.label_54.noteName = 'D#3'
+        self.label_54.noteName = 'D#'
+        self.label_54.pitchNum = 3
         self.label_55 = QtWidgets.QLabel(self.centralwidget)
         self.label_55.setEnabled(True)
         self.label_55.setGeometry(QtCore.QRect(460, 330, 21, 21))
@@ -2137,7 +2199,8 @@ class Ui_MainWindow(object):
         self.label_55.setPixmap(QtGui.QPixmap("dot.png"))
         self.label_55.setScaledContents(True)
         self.label_55.setObjectName("label_55")
-        self.label_55.noteName = 'E3'
+        self.label_55.noteName = 'E'
+        self.label_55.pitchNum = 3
         self.label_56 = QtWidgets.QLabel(self.centralwidget)
         self.label_56.setEnabled(True)
         self.label_56.setGeometry(QtCore.QRect(510, 330, 21, 21))
@@ -2145,7 +2208,8 @@ class Ui_MainWindow(object):
         self.label_56.setPixmap(QtGui.QPixmap("dot.png"))
         self.label_56.setScaledContents(True)
         self.label_56.setObjectName("label_56")
-        self.label_56.noteName = 'F3'
+        self.label_56.noteName = 'F'
+        self.label_56.pitchNum = 3
         self.label_57 = QtWidgets.QLabel(self.centralwidget)
         self.label_57.setEnabled(True)
         self.label_57.setGeometry(QtCore.QRect(560, 330, 21, 21))
@@ -2153,7 +2217,8 @@ class Ui_MainWindow(object):
         self.label_57.setPixmap(QtGui.QPixmap("dot.png"))
         self.label_57.setScaledContents(True)
         self.label_57.setObjectName("label_57")
-        self.label_57.noteName = 'F#3'
+        self.label_57.noteName = 'F#'
+        self.label_57.pitchNum = 3
         self.label_58 = QtWidgets.QLabel(self.centralwidget)
         self.label_58.setEnabled(True)
         self.label_58.setGeometry(QtCore.QRect(600, 330, 21, 21))
@@ -2161,7 +2226,8 @@ class Ui_MainWindow(object):
         self.label_58.setPixmap(QtGui.QPixmap("dot.png"))
         self.label_58.setScaledContents(True)
         self.label_58.setObjectName("label_58")
-        self.label_58.noteName = 'G3'
+        self.label_58.noteName = 'G'
+        self.label_58.pitchNum = 3
         self.label_59 = QtWidgets.QLabel(self.centralwidget)
         self.label_59.setEnabled(True)
         self.label_59.setGeometry(QtCore.QRect(640, 330, 21, 21))
@@ -2169,7 +2235,8 @@ class Ui_MainWindow(object):
         self.label_59.setPixmap(QtGui.QPixmap("dot.png"))
         self.label_59.setScaledContents(True)
         self.label_59.setObjectName("label_59")
-        self.label_59.noteName = 'G#3'
+        self.label_59.noteName = 'G#'
+        self.label_59.pitchNum = 3
         self.label_60 = QtWidgets.QLabel(self.centralwidget)
         self.label_60.setEnabled(True)
         self.label_60.setGeometry(QtCore.QRect(680, 330, 21, 21))
@@ -2177,7 +2244,8 @@ class Ui_MainWindow(object):
         self.label_60.setPixmap(QtGui.QPixmap("dot.png"))
         self.label_60.setScaledContents(True)
         self.label_60.setObjectName("label_60")
-        self.label_60.noteName = 'A3'
+        self.label_60.noteName = 'A'
+        self.label_60.pitchNum = 3
         self.label_61 = QtWidgets.QLabel(self.centralwidget)
         self.label_61.setEnabled(True)
         self.label_61.setGeometry(QtCore.QRect(130, 370, 21, 21))
@@ -2185,7 +2253,8 @@ class Ui_MainWindow(object):
         self.label_61.setPixmap(QtGui.QPixmap("dot.png"))
         self.label_61.setScaledContents(True)
         self.label_61.setObjectName("label_61")
-        self.label_61.noteName = 'F2'
+        self.label_61.noteName = 'F'
+        self.label_61.pitchNum = 2
         self.label_62 = QtWidgets.QLabel(self.centralwidget)
         self.label_62.setEnabled(True)
         self.label_62.setGeometry(QtCore.QRect(190, 370, 21, 21))
@@ -2193,7 +2262,8 @@ class Ui_MainWindow(object):
         self.label_62.setPixmap(QtGui.QPixmap("dot.png"))
         self.label_62.setScaledContents(True)
         self.label_62.setObjectName("label_62")
-        self.label_62.noteName = 'F#2'
+        self.label_62.noteName = 'F#'
+        self.label_62.pitchNum = 2
         self.label_63 = QtWidgets.QLabel(self.centralwidget)
         self.label_63.setEnabled(True)
         self.label_63.setGeometry(QtCore.QRect(250, 370, 21, 21))
@@ -2201,7 +2271,8 @@ class Ui_MainWindow(object):
         self.label_63.setPixmap(QtGui.QPixmap("dot.png"))
         self.label_63.setScaledContents(True)
         self.label_63.setObjectName("label_63")
-        self.label_63.noteName = 'G2'
+        self.label_63.noteName = 'G'
+        self.label_63.pitchNum = 2
         self.label_64 = QtWidgets.QLabel(self.centralwidget)
         self.label_64.setEnabled(True)
         self.label_64.setGeometry(QtCore.QRect(310, 370, 21, 21))
@@ -2209,7 +2280,8 @@ class Ui_MainWindow(object):
         self.label_64.setPixmap(QtGui.QPixmap("dot.png"))
         self.label_64.setScaledContents(True)
         self.label_64.setObjectName("label_64")
-        self.label_64.noteName = 'G#2'
+        self.label_64.noteName = 'G#'
+        self.label_64.pitchNum = 2
         self.label_65 = QtWidgets.QLabel(self.centralwidget)
         self.label_65.setEnabled(True)
         self.label_65.setGeometry(QtCore.QRect(360, 370, 21, 21))
@@ -2217,7 +2289,8 @@ class Ui_MainWindow(object):
         self.label_65.setPixmap(QtGui.QPixmap("dot.png"))
         self.label_65.setScaledContents(True)
         self.label_65.setObjectName("label_65")
-        self.label_65.noteName = 'A2'
+        self.label_65.noteName = 'A'
+        self.label_65.pitchNum = 2
         self.label_66 = QtWidgets.QLabel(self.centralwidget)
         self.label_66.setEnabled(True)
         self.label_66.setGeometry(QtCore.QRect(410, 370, 21, 21))
@@ -2225,7 +2298,8 @@ class Ui_MainWindow(object):
         self.label_66.setPixmap(QtGui.QPixmap("dot.png"))
         self.label_66.setScaledContents(True)
         self.label_66.setObjectName("label_66")
-        self.label_66.noteName = 'A#2'
+        self.label_66.noteName = 'A#'
+        self.label_66.pitchNum = 2
         self.label_67 = QtWidgets.QLabel(self.centralwidget)
         self.label_67.setEnabled(True)
         self.label_67.setGeometry(QtCore.QRect(460, 370, 21, 21))
@@ -2233,7 +2307,8 @@ class Ui_MainWindow(object):
         self.label_67.setPixmap(QtGui.QPixmap("dot.png"))
         self.label_67.setScaledContents(True)
         self.label_67.setObjectName("label_67")
-        self.label_67.noteName = 'B2'
+        self.label_67.noteName = 'B'
+        self.label_67.pitchNum = 2
         self.label_68 = QtWidgets.QLabel(self.centralwidget)
         self.label_68.setEnabled(True)
         self.label_68.setGeometry(QtCore.QRect(510, 370, 21, 21))
@@ -2241,7 +2316,8 @@ class Ui_MainWindow(object):
         self.label_68.setPixmap(QtGui.QPixmap("dot.png"))
         self.label_68.setScaledContents(True)
         self.label_68.setObjectName("label_68")
-        self.label_68.noteName = 'C3'
+        self.label_68.noteName = 'C'
+        self.label_68.pitchNum = 3
         self.label_69 = QtWidgets.QLabel(self.centralwidget)
         self.label_69.setEnabled(True)
         self.label_69.setGeometry(QtCore.QRect(560, 370, 21, 21))
@@ -2249,7 +2325,8 @@ class Ui_MainWindow(object):
         self.label_69.setPixmap(QtGui.QPixmap("dot.png"))
         self.label_69.setScaledContents(True)
         self.label_69.setObjectName("label_69")
-        self.label_69.noteName = 'C#3'
+        self.label_69.noteName = 'C#'
+        self.label_69.pitchNum = 3
         self.label_70 = QtWidgets.QLabel(self.centralwidget)
         self.label_70.setEnabled(True)
         self.label_70.setGeometry(QtCore.QRect(600, 370, 21, 21))
@@ -2257,7 +2334,8 @@ class Ui_MainWindow(object):
         self.label_70.setPixmap(QtGui.QPixmap("dot.png"))
         self.label_70.setScaledContents(True)
         self.label_70.setObjectName("label_70")
-        self.label_70.noteName = 'D3'
+        self.label_70.noteName = 'D'
+        self.label_70.pitchNum = 3
         self.label_71 = QtWidgets.QLabel(self.centralwidget)
         self.label_71.setEnabled(True)
         self.label_71.setGeometry(QtCore.QRect(640, 370, 21, 21))
@@ -2265,7 +2343,8 @@ class Ui_MainWindow(object):
         self.label_71.setPixmap(QtGui.QPixmap("dot.png"))
         self.label_71.setScaledContents(True)
         self.label_71.setObjectName("label_71")
-        self.label_71.noteName = 'D#3'
+        self.label_71.noteName = 'D#'
+        self.label_71.pitchNum = 3
         self.label_72 = QtWidgets.QLabel(self.centralwidget)
         self.label_72.setEnabled(True)
         self.label_72.setGeometry(QtCore.QRect(680, 370, 21, 21))
@@ -2273,7 +2352,8 @@ class Ui_MainWindow(object):
         self.label_72.setPixmap(QtGui.QPixmap("dot.png"))
         self.label_72.setScaledContents(True)
         self.label_72.setObjectName("label_72")
-        self.label_72.noteName = 'E3'
+        self.label_72.noteName = 'E'
+        self.label_72.pitchNum = 3
 
         ######################## Fret Number ########################
 
@@ -2436,7 +2516,7 @@ class Ui_MainWindow(object):
             point.show()
             point.press = True
             self.component_notes[point.stringNum] = point.noteName
-            self.setNoteName(point.stringNum, point.noteName)
+            self.setNoteName(point.stringNum, point.noteName, point.pitchNum)
             # Lock other frets in the same string
             for line in self.strings[point.stringNum-1]:
                 point_ = line.point
@@ -2446,8 +2526,10 @@ class Ui_MainWindow(object):
         else:
             point.hide()
             point.press = False
-            self.component_notes[point.stringNum] = OPEN_STRING_NOTE_NAME[point.stringNum]
-            self.setNoteName(point.stringNum, OPEN_STRING_NOTE_NAME[point.stringNum])
+            noteName = OPEN_STRING_NOTE_NAME[point.stringNum]['noteName']
+            pitchNum = OPEN_STRING_NOTE_NAME[point.stringNum]['pitchNum']
+            self.component_notes[point.stringNum] = noteName
+            self.setNoteName(point.stringNum, noteName, pitchNum)
             for line in self.strings[point.stringNum-1]:
                 line.point.lock = False
                 line.setCursor(QtGui.QCursor(QtCore.Qt.ArrowCursor))
@@ -2457,9 +2539,9 @@ class Ui_MainWindow(object):
     def checkChord(self):
         component_notes = []
         for idx in range(6, 0, -1):
-            if self.string_muted[idx] or self.component_notes[idx][:-1] in component_notes:
+            if self.string_muted[idx] or self.component_notes[idx] in component_notes:
                 continue
-            component_notes.append(self.component_notes[idx][:-1]) # Filter the 4 of 'G4'
+            component_notes.append(self.component_notes[idx]) # Filter the 4 of 'G4'
         print(component_notes)
         Chord = note_to_chord(component_notes)
         print(Chord)
@@ -2482,24 +2564,26 @@ class Ui_MainWindow(object):
             self.pressPointHelper(point)
         return mousePressEvent_dec
 
-    def setNoteName(self, stringNum, noteName):
+    def setNoteName(self, stringNum, noteName, pitchNum):
+        assert(len(noteName) < 3 and len(noteName) > 0)
+        s = f'{noteName[0]}'
         if len(noteName) == 2:
-            noteName = f'{noteName[0]}<sub>{noteName[1]}</sub>'
-        else:
-            assert(len(noteName) == 3)
-            noteName = f'{noteName[0]}<sup>{noteName[1]}</sup><sub>{noteName[2]}</sub>'
+            s += f'<sup>{noteName[1]}</sup>'
+        s += f'<sub>{pitchNum}</sub>'
         _translate = QtCore.QCoreApplication.translate
         self.textBrowsers[stringNum-1].setHtml(_translate("MainWindow", "<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 4.0//EN\" \"http://www.w3.org/TR/REC-html40/strict.dtd\">\n"
     "<html><head><meta name=\"qrichtext\" content=\"1\" /><style type=\"text/css\">\n"
     "p, li { white-space: pre-wrap; }\n"
     "</style></head><body style=\" font-family:\'PMingLiU\'; font-size:13pt; font-weight:400; font-style:normal;\">\n"
-    f"<p align=\"center\" style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-weight:600;\">{noteName}</span></p></body></html>"))
+    f"<p align=\"center\" style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-weight:600;\">{s}</span></p></body></html>"))
 
     def retranslateUi(self, MainWindow):
         _translate = QtCore.QCoreApplication.translate
         MainWindow.setWindowTitle(_translate("MainWindow", "ThreeNotes"))
         for string_idx in range(1, STRING_NUM+1):
-            self.setNoteName(string_idx, OPEN_STRING_NOTE_NAME[string_idx])
+            noteName = OPEN_STRING_NOTE_NAME[string_idx]['noteName']
+            pitchNum = OPEN_STRING_NOTE_NAME[string_idx]['pitchNum']
+            self.setNoteName(string_idx, noteName, pitchNum)
         self.label_200.setText(_translate("MainWindow", "3"))
         self.label_201.setText(_translate("MainWindow", "5"))
         self.label_202.setText(_translate("MainWindow", "7"))
