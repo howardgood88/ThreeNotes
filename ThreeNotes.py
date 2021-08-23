@@ -24,12 +24,18 @@ POINTS_INDEX_END = 72
 
 class ThreeNotes(Fretboard_ui.Fretboard_ui): # Inherit from Fretboard_ui.py
     def __init__(self, MainWindow):
+        '''
+            The dynamic object: 
+            self.component_notes: Record the notes now playing,
+            self.string_muted: Record the strings now muting,
+            self.strings[*].pressPoint: Record the point now pressing of string *,
+
+            Relationshop:
+            self.strings[*][*].point = self.points[*]
+        '''
         super().__init__(MainWindow)
 
-        self.component_notes = {
-            1:'E', 2:'B', 3:'G',
-            4:'D', 5:'A', 6:'E'
-        }
+        self.component_notes = {stringNum: val['noteName'] for stringNum, val in OPEN_STRING_NOTE_NAME.items()}
         self.string_muted = {i:False for i in range(1, STRING_NUM + 1)}
         self.Horizon_lines = [vars(self)[f'line_{i}'] for i in range(HORIZON_LINES_INDEX_START, HORIZON_LINES_INDEX_END + 1)]
         self.Vertical_lines = [vars(self)[f'line_{i}'] for i in range(VERTICAL_LINES_INDEX_START, VERTICAL_LINES_INDEX_END + 1)]
@@ -37,11 +43,28 @@ class ThreeNotes(Fretboard_ui.Fretboard_ui): # Inherit from Fretboard_ui.py
         self.setRelationship(self.Horizon_lines, self.points)
         self.strings = self.string_init(self.Horizon_lines)
         self.textBrowsers = [vars(self)[f'textBrowser_{i}'] for i in range(1, STRING_NUM + 1)]
+        self.checkBoxs = [vars(self)[f'checkBox_{i}'] for i in range(1, STRING_NUM + 1)]
 
         self.retranslateUi(MainWindow)
         QtCore.QMetaObject.connectSlotsByName(MainWindow)
 
-    def setRelationship(self, lines, points):
+        self.resetButton.clicked.connect(self.resetEvent)
+
+        def selectCheckBoxEvent(stringNum):
+            self.string_muted[stringNum] = not self.string_muted[stringNum]
+            print(stringNum)
+            print(self.string_muted)
+            self.checkChord()
+
+        self.checkBoxs[0].stateChanged.connect(lambda:selectCheckBoxEvent(stringNum = 1))
+        self.checkBoxs[1].stateChanged.connect(lambda:selectCheckBoxEvent(stringNum = 2))
+        self.checkBoxs[2].stateChanged.connect(lambda:selectCheckBoxEvent(stringNum = 3))
+        self.checkBoxs[3].stateChanged.connect(lambda:selectCheckBoxEvent(stringNum = 4))
+        self.checkBoxs[4].stateChanged.connect(lambda:selectCheckBoxEvent(stringNum = 5))
+        self.checkBoxs[5].stateChanged.connect(lambda:selectCheckBoxEvent(stringNum = 6))
+        
+
+    def setRelationship(self, lines: list, points: list):
         '''
             Set the relationship between line and point and some initial values
         '''
@@ -62,13 +85,12 @@ class ThreeNotes(Fretboard_ui.Fretboard_ui): # Inherit from Fretboard_ui.py
 
             point.mousePressEvent = mousePress_point(point)
             point.press = False
-            point.lock = False
             point.hide()
 
             line.point = point
             line.mousePressEvent = mousePress_line(line)
 
-    def string_init(self, lines):
+    def string_init(self, lines: list):
         '''
             Pack every twelve continuously adjacent horizon lines into a string.
         '''
@@ -76,9 +98,9 @@ class ThreeNotes(Fretboard_ui.Fretboard_ui): # Inherit from Fretboard_ui.py
             def __init__(self):
                 super().__init__()
                 self.pressedPoint = None
-        strings = String()
+        strings = []
         for string_idx in range(STRING_NUM):
-            strings.append([])
+            strings.append(String())
             for note_idx in range(NOTE_PER_STRING):
                 idx = string_idx * NOTE_PER_STRING + note_idx
                 assert(0 <= idx and idx < 72)
@@ -91,30 +113,24 @@ class ThreeNotes(Fretboard_ui.Fretboard_ui): # Inherit from Fretboard_ui.py
         '''
             Set the reaction after pressing on fret.
         '''
-        if point.lock:
-            return
+        stringNum = point.stringNum
+        string = self.strings[stringNum - 1]
         if not point.press:
-            self.strings.pressedPoint = point
+            if string.pressedPoint:
+                string.pressedPoint.hide()
+                string.pressedPoint.press = False
+            string.pressedPoint = point
             point.show()
             point.press = True
-            self.component_notes[point.stringNum] = point.noteName
-            self.setNoteName(point.stringNum, point.noteName, point.pitchNum)
-            # Lock other frets in the same string
-            for line in self.strings[point.stringNum-1]:
-                point_ = line.point
-                if point_ != point:
-                    point_.lock = True
-                    line.setCursor(QtGui.QCursor(QtCore.Qt.ForbiddenCursor))
+            noteName, pitchNum = point.noteName, point.pitchNum
         else:
             point.hide()
             point.press = False
-            noteName = OPEN_STRING_NOTE_NAME[point.stringNum]['noteName']
-            pitchNum = OPEN_STRING_NOTE_NAME[point.stringNum]['pitchNum']
-            self.component_notes[point.stringNum] = noteName
-            self.setNoteName(point.stringNum, noteName, pitchNum)
-            for line in self.strings[point.stringNum-1]:
-                line.point.lock = False
-                line.setCursor(QtGui.QCursor(QtCore.Qt.ArrowCursor))
+            string.pressedPoint = None
+            noteName = OPEN_STRING_NOTE_NAME[stringNum]['noteName']
+            pitchNum = OPEN_STRING_NOTE_NAME[stringNum]['pitchNum']
+        self.component_notes[stringNum] = noteName
+        self.setNoteName(stringNum, noteName, pitchNum)
         self.checkChord()
 
     def checkChord(self):
@@ -168,6 +184,7 @@ class ThreeNotes(Fretboard_ui.Fretboard_ui): # Inherit from Fretboard_ui.py
         self.label_204.setText(_translate("MainWindow", "12"))
         self.label_chord_identifier.setText(_translate("MainWindow", "Chord:"))
         self.label_check_box.setText(_translate("MainWindow", "Mute"))
+        self.resetButton.setText(_translate("MainWindow", "Reset"))
 
     def setNoteName(self, stringNum, noteName, pitchNum):
         assert(len(noteName) < 3 and len(noteName) > 0)
@@ -181,7 +198,18 @@ class ThreeNotes(Fretboard_ui.Fretboard_ui): # Inherit from Fretboard_ui.py
     "p, li { white-space: pre-wrap; }\n"
     "</style></head><body style=\" font-family:\'PMingLiU\'; font-size:13pt; font-weight:400; font-style:normal;\">\n"
     f"<p align=\"center\" style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-weight:600;\">{s}</span></p></body></html>"))
-        
+
+    def resetEvent(self):
+        self.component_notes = {stringNum: val['noteName'] for stringNum, val in OPEN_STRING_NOTE_NAME.items()}
+        for string in self.strings:
+            if string.pressedPoint != None:
+                point = string.pressedPoint
+                self.pressPointHelper(point)
+        for idx in range(STRING_NUM):
+            if self.string_muted[idx + 1]:
+                self.checkBoxs[idx].click()
+        self.checkChord()
+
 
 if __name__ == "__main__":
     import sys

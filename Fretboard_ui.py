@@ -2401,10 +2401,6 @@ class Fretboard_ui(object):
         ######################## Check Box ########################
         ###########################################################
 
-        def selectCheckBoxEvent(stringNum):
-            self.string_muted[stringNum] = not self.string_muted[stringNum]
-            self.checkChord()
-
         self.label_check_box = QtWidgets.QLabel(self.centralwidget)
         self.label_check_box.setGeometry(QtCore.QRect(-2, 140, 61, 16))
         font = QtGui.QFont()
@@ -2419,32 +2415,26 @@ class Fretboard_ui(object):
         self.checkBox_1.setGeometry(QtCore.QRect(20, 170, 16, 16))
         self.checkBox_1.setText("")
         self.checkBox_1.setObjectName("checkBox_1")
-        self.checkBox_1.stateChanged.connect(lambda:selectCheckBoxEvent(stringNum = 1))
         self.checkBox_2 = QtWidgets.QCheckBox(self.centralwidget)
         self.checkBox_2.setGeometry(QtCore.QRect(20, 210, 16, 16))
         self.checkBox_2.setText("")
         self.checkBox_2.setObjectName("checkBox_2")
-        self.checkBox_2.stateChanged.connect(lambda:selectCheckBoxEvent(stringNum = 2))
         self.checkBox_3 = QtWidgets.QCheckBox(self.centralwidget)
         self.checkBox_3.setGeometry(QtCore.QRect(20, 250, 16, 16))
         self.checkBox_3.setText("")
         self.checkBox_3.setObjectName("checkBox_3")
-        self.checkBox_3.stateChanged.connect(lambda:selectCheckBoxEvent(stringNum = 3))
         self.checkBox_4 = QtWidgets.QCheckBox(self.centralwidget)
         self.checkBox_4.setGeometry(QtCore.QRect(20, 290, 16, 16))
         self.checkBox_4.setText("")
         self.checkBox_4.setObjectName("checkBox_4")
-        self.checkBox_4.stateChanged.connect(lambda:selectCheckBoxEvent(stringNum = 4))
         self.checkBox_5 = QtWidgets.QCheckBox(self.centralwidget)
         self.checkBox_5.setGeometry(QtCore.QRect(20, 330, 16, 16))
         self.checkBox_5.setText("")
         self.checkBox_5.setObjectName("checkBox_5")
-        self.checkBox_5.stateChanged.connect(lambda:selectCheckBoxEvent(stringNum = 5))
         self.checkBox_6 = QtWidgets.QCheckBox(self.centralwidget)
         self.checkBox_6.setGeometry(QtCore.QRect(20, 370, 16, 16))
         self.checkBox_6.setText("")
         self.checkBox_6.setObjectName("checkBox_6")
-        self.checkBox_6.stateChanged.connect(lambda:selectCheckBoxEvent(stringNum = 6))
 
         ##################################################################
         ######################## Chord Identifier ########################
@@ -2463,9 +2453,9 @@ class Fretboard_ui(object):
         self.textBrowser_chord_identifier.setGeometry(QtCore.QRect(170, 85, 100, 31))
         self.textBrowser_chord_identifier.setObjectName("textBrowser_chord_identifier")
 
-        ######################################################
-        ######################## Menu ########################
-        ######################################################
+        #############################################################
+        ######################## Menu, reset ########################
+        #############################################################
 
         MainWindow.setCentralWidget(self.centralwidget)
         self.menubar = QtWidgets.QMenuBar(MainWindow)
@@ -2475,3 +2465,6 @@ class Fretboard_ui(object):
         self.statusbar = QtWidgets.QStatusBar(MainWindow)
         self.statusbar.setObjectName("statusbar")
         MainWindow.setStatusBar(self.statusbar)
+        self.resetButton = QtWidgets.QPushButton(self.centralwidget)
+        self.resetButton.setGeometry(QtCore.QRect(650, 400, 61, 31))
+        self.resetButton.setObjectName("resetButton")
