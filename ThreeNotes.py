@@ -52,8 +52,6 @@ class ThreeNotes(Fretboard_ui.Fretboard_ui): # Inherit from Fretboard_ui.py
 
         def selectCheckBoxEvent(stringNum):
             self.string_muted[stringNum] = not self.string_muted[stringNum]
-            print(stringNum)
-            print(self.string_muted)
             self.checkChord()
 
         self.checkBoxs[0].stateChanged.connect(lambda:selectCheckBoxEvent(stringNum = 1))
@@ -156,21 +154,27 @@ class ThreeNotes(Fretboard_ui.Fretboard_ui): # Inherit from Fretboard_ui.py
         notes_position = getNotesPosition(component_notes, root_note)
 
         _, component_notes = zip(*sorted(zip(notes_position, component_notes)))
-        Chord = note_to_chord(component_notes)
-        Chord = Chord[0].chord if Chord else ''
-        self.setChord(Chord)
+        chord = note_to_chord(component_notes)
+        chordName = chord[0].chord if chord else ''
+        self.setChordText(chordName)
         print(component_notes)
-        print(Chord)
+        print(chordName)
     
-    def setChord(self, chord):
+    def setChordText(self, chordName):
+        '''
+            Set the text in text browser by chord name.
+        '''
         _translate = QtCore.QCoreApplication.translate
         self.textBrowser_chord_identifier.setHtml(_translate("MainWindow", "<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 4.0//EN\" \"http://www.w3.org/TR/REC-html40/strict.dtd\">\n"
             "<html><head><meta name=\"qrichtext\" content=\"1\" /><style type=\"text/css\">\n"
             "p, li { white-space: pre-wrap; }\n"
             "</style></head><body style=\" font-family:\'PMingLiU\'; font-size:13pt; font-weight:400; font-style:normal;\">\n"
-            f"<p align=\"center\" style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-weight:600;\">{chord}</span></p></body></html>"))
+            f"<p align=\"center\" style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-weight:600;\">{chordName}</span></p></body></html>"))
 
     def retranslateUi(self, MainWindow):
+        '''
+            Set the initial text of all object.
+        '''
         _translate = QtCore.QCoreApplication.translate
         MainWindow.setWindowTitle(_translate("MainWindow", "ThreeNotes"))
         for string_idx in range(1, STRING_NUM+1):
@@ -187,7 +191,10 @@ class ThreeNotes(Fretboard_ui.Fretboard_ui): # Inherit from Fretboard_ui.py
         self.resetButton.setText(_translate("MainWindow", "Reset"))
 
     def setNoteName(self, stringNum, noteName, pitchNum):
-        assert(len(noteName) < 3 and len(noteName) > 0)
+        '''
+            Set the note of string "stringNum" by noteName and pitchNum.
+        '''
+        assert(0 < len(noteName) and len(noteName) < 3)
         s = f'{noteName[0]}'
         if len(noteName) == 2:
             s += f'<sup>{noteName[1]}</sup>'
@@ -200,6 +207,9 @@ class ThreeNotes(Fretboard_ui.Fretboard_ui): # Inherit from Fretboard_ui.py
     f"<p align=\"center\" style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-weight:600;\">{s}</span></p></body></html>"))
 
     def resetEvent(self):
+        '''
+            Reset to original state.
+        '''
         self.component_notes = {stringNum: val['noteName'] for stringNum, val in OPEN_STRING_NOTE_NAME.items()}
         for string in self.strings:
             if string.pressedPoint != None:
