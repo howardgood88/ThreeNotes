@@ -10,7 +10,6 @@
 from PyQt5 import QtCore, QtGui, QtWidgets
 import base64
 from io import BytesIO
-from pic2str import explode
 from PIL import Image, ImageQt
 
 class Fretboard_ui(object):
