@@ -30,8 +30,9 @@ class ThreeNotes(Fretboard_ui.Fretboard_ui): # Inherit from Fretboard_ui.py
             self.string_muted: Record the strings now muting,
             self.strings[*].pressPoint: Record the point now pressing of string *,
 
-            Relationshop:
-            self.strings[*][*].point = self.points[*]
+            Point:
+            self.strings[*][*].point, self.points[*], self.strings[*].pressPoint,
+            self.Horizon_lines[*].point
         '''
         super().__init__(MainWindow)
 

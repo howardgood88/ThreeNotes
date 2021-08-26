@@ -4,9 +4,9 @@
 1. Identify and show the chord know pressing.
 
 ## Matters needing attention
-1. When identifying chord, non-root notes must be muted!!!. For example: chord D need to mute the fifth and sixth strings.
+1. When identifying chord, non-root notes must be muted!!!. For example: Chord D needs to mute the fifth and sixth strings, chord C needs to mute the sixth string.
 
 ## Future Works
 1. Show the component notes of specific chord.
-1. Show the fret of specific note.
+1. Show the frets of specific note.
 1. Show the possible fingering patterns of specific chord.
