@@ -1,5 +1,7 @@
 # ThreeNotes
 A fretboard playground for guitar.
+
+## Software screenshot:
 ![](screenshot.PNG)
 
 ## Features
