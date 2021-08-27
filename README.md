@@ -1,4 +1,6 @@
 # ThreeNotes
+A playground for guitar.
+
 ## Features
 1. View the component notes of and chord.
 1. Identify and show the chord know pressing.
