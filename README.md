@@ -1,5 +1,6 @@
 # ThreeNotes
 A fretboard playground for guitar.
+![](screenshot.PNG)
 
 ## Features
 1. View the component notes of and chord.
