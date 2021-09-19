@@ -1,17 +1,23 @@
 # ThreeNotes
 A fretboard playground for guitar.
 
+Show the component notes and chord now playing.
+
+## Operations Support
+1. [Click] on strings (each string with 12 frets).
+1. [Mute] the strings.
+1. [Reset] to the initial state.
+
 ## Software screenshot:
 ![](screenshot.PNG)
 
-## Features
-1. View the component notes of and chord.
-1. Identify and show the chord know pressing.
-
-## Matters needing attention
-1. When identifying chord, non-root notes must be muted!!!. For example: Chord D needs to mute the fifth and sixth strings, chord C needs to mute the sixth string.
+## Attention
+1. When identifying chord, non-root open strings must be muted!!!.
+    For example:
+    * Chord C needs to mute 6-th string.
+    * Chord D needs to mute 5-th and 6-th strings.
 
 ## Future Works
 1. Show the component notes of specific chord.
-1. Show the frets of specific note.
+1. Show the all the press points of specific note.
 1. Show the possible fingering patterns of specific chord.
