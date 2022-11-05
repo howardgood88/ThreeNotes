@@ -1,5 +1,5 @@
 from PyQt5 import QtCore, QtGui, QtWidgets
-from pychord import note_to_chord
+from pychord import find_chords_from_notes
 from pychord.analyzer import notes_to_positions
 import Fretboard_ui
 
@@ -155,7 +155,7 @@ class ThreeNotes(Fretboard_ui.Fretboard_ui): # Inherit from Fretboard_ui.py
         notes_position = getNotesPosition(component_notes, root_note)
 
         _, component_notes = zip(*sorted(zip(notes_position, component_notes)))
-        chord = note_to_chord(component_notes)
+        chord = find_chords_from_notes(component_notes)
         chordName = chord[0].chord if chord else ''
         self.setChordText(chordName)
         print(component_notes)
