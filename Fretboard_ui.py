@@ -3252,1048 +3252,1051 @@ class Fretboard_ui(object):
         self.label_12.setObjectName("label_12")
         self.label_12.noteName = 'E'
         self.label_12.pitchNum = 5
+
         self.label_13 = QtWidgets.QLabel(self.centralwidget)
         self.label_13.setEnabled(True)
-        self.label_13.setGeometry(QtCore.QRect(130, 210, 21, 21))
+        self.label_13.setGeometry(QtCore.QRect(720, 170, 21, 21))
         self.label_13.setText("")
         self.label_13.setPixmap(QtGui.QPixmap.fromImage(image))
         self.label_13.setScaledContents(True)
         self.label_13.setObjectName("label_13")
-        self.label_13.noteName = 'C'
-        self.label_13.pitchNum = 4
+        self.label_13.noteName = 'F'
+        self.label_13.pitchNum = 5
+
         self.label_14 = QtWidgets.QLabel(self.centralwidget)
         self.label_14.setEnabled(True)
-        self.label_14.setGeometry(QtCore.QRect(190, 210, 21, 21))
+        self.label_14.setGeometry(QtCore.QRect(760, 170, 21, 21))
         self.label_14.setText("")
         self.label_14.setPixmap(QtGui.QPixmap.fromImage(image))
         self.label_14.setScaledContents(True)
         self.label_14.setObjectName("label_14")
-        self.label_14.noteName = 'C#'
-        self.label_14.pitchNum = 4
+        self.label_14.noteName = 'F#'
+        self.label_14.pitchNum = 5
+
         self.label_15 = QtWidgets.QLabel(self.centralwidget)
         self.label_15.setEnabled(True)
-        self.label_15.setGeometry(QtCore.QRect(250, 210, 21, 21))
+        self.label_15.setGeometry(QtCore.QRect(800, 170, 21, 21))
         self.label_15.setText("")
         self.label_15.setPixmap(QtGui.QPixmap.fromImage(image))
         self.label_15.setScaledContents(True)
         self.label_15.setObjectName("label_15")
-        self.label_15.noteName = 'D'
-        self.label_15.pitchNum = 4
+        self.label_15.noteName = 'G'
+        self.label_15.pitchNum = 5
+
         self.label_16 = QtWidgets.QLabel(self.centralwidget)
         self.label_16.setEnabled(True)
-        self.label_16.setGeometry(QtCore.QRect(310, 210, 21, 21))
+        self.label_16.setGeometry(QtCore.QRect(840, 170, 21, 21))
         self.label_16.setText("")
         self.label_16.setPixmap(QtGui.QPixmap.fromImage(image))
         self.label_16.setScaledContents(True)
         self.label_16.setObjectName("label_16")
-        self.label_16.noteName = 'D#'
-        self.label_16.pitchNum = 4
+        self.label_16.noteName = 'G#'
+        self.label_16.pitchNum = 5
+
         self.label_17 = QtWidgets.QLabel(self.centralwidget)
         self.label_17.setEnabled(True)
-        self.label_17.setGeometry(QtCore.QRect(360, 210, 21, 21))
+        self.label_17.setGeometry(QtCore.QRect(880, 170, 21, 21))
         self.label_17.setText("")
         self.label_17.setPixmap(QtGui.QPixmap.fromImage(image))
         self.label_17.setScaledContents(True)
         self.label_17.setObjectName("label_17")
-        self.label_17.noteName = 'E'
-        self.label_17.pitchNum = 4
+        self.label_17.noteName = 'A'
+        self.label_17.pitchNum = 5
+
         self.label_18 = QtWidgets.QLabel(self.centralwidget)
         self.label_18.setEnabled(True)
-        self.label_18.setGeometry(QtCore.QRect(410, 210, 21, 21))
+        self.label_18.setGeometry(QtCore.QRect(920, 170, 21, 21))
         self.label_18.setText("")
         self.label_18.setPixmap(QtGui.QPixmap.fromImage(image))
         self.label_18.setScaledContents(True)
         self.label_18.setObjectName("label_18")
-        self.label_18.noteName = 'F'
-        self.label_18.pitchNum = 4
+        self.label_18.noteName = 'A#'
+        self.label_18.pitchNum = 5
+
         self.label_19 = QtWidgets.QLabel(self.centralwidget)
         self.label_19.setEnabled(True)
-        self.label_19.setGeometry(QtCore.QRect(460, 210, 21, 21))
+        self.label_19.setGeometry(QtCore.QRect(960, 170, 21, 21))
         self.label_19.setText("")
         self.label_19.setPixmap(QtGui.QPixmap.fromImage(image))
         self.label_19.setScaledContents(True)
         self.label_19.setObjectName("label_19")
-        self.label_19.noteName = 'F#'
-        self.label_19.pitchNum = 4
+        self.label_19.noteName = 'B'
+        self.label_19.pitchNum = 5
+
         self.label_20 = QtWidgets.QLabel(self.centralwidget)
         self.label_20.setEnabled(True)
-        self.label_20.setGeometry(QtCore.QRect(510, 210, 21, 21))
+        self.label_20.setGeometry(QtCore.QRect(1000, 170, 21, 21))
         self.label_20.setText("")
         self.label_20.setPixmap(QtGui.QPixmap.fromImage(image))
         self.label_20.setScaledContents(True)
         self.label_20.setObjectName("label_20")
-        self.label_20.noteName = 'G'
-        self.label_20.pitchNum = 4
+        self.label_20.noteName = 'C'
+        self.label_20.pitchNum = 6
+
         self.label_21 = QtWidgets.QLabel(self.centralwidget)
         self.label_21.setEnabled(True)
-        self.label_21.setGeometry(QtCore.QRect(560, 210, 21, 21))
+        self.label_21.setGeometry(QtCore.QRect(1040, 170, 21, 21))
         self.label_21.setText("")
         self.label_21.setPixmap(QtGui.QPixmap.fromImage(image))
         self.label_21.setScaledContents(True)
         self.label_21.setObjectName("label_21")
-        self.label_21.noteName = 'G#'
-        self.label_21.pitchNum = 4
+        self.label_21.noteName = 'C#'
+        self.label_21.pitchNum = 6
+
         self.label_22 = QtWidgets.QLabel(self.centralwidget)
         self.label_22.setEnabled(True)
-        self.label_22.setGeometry(QtCore.QRect(600, 210, 21, 21))
+        self.label_22.setGeometry(QtCore.QRect(1080, 170, 21, 21))
         self.label_22.setText("")
         self.label_22.setPixmap(QtGui.QPixmap.fromImage(image))
         self.label_22.setScaledContents(True)
         self.label_22.setObjectName("label_22")
-        self.label_22.noteName = 'A'
-        self.label_22.pitchNum = 4
+        self.label_22.noteName = 'D'
+        self.label_22.pitchNum = 6
+
         self.label_23 = QtWidgets.QLabel(self.centralwidget)
         self.label_23.setEnabled(True)
-        self.label_23.setGeometry(QtCore.QRect(640, 210, 21, 21))
+        self.label_23.setGeometry(QtCore.QRect(130, 210, 21, 21))
         self.label_23.setText("")
         self.label_23.setPixmap(QtGui.QPixmap.fromImage(image))
         self.label_23.setScaledContents(True)
         self.label_23.setObjectName("label_23")
-        self.label_23.noteName = 'A#'
+        self.label_23.noteName = 'C'
         self.label_23.pitchNum = 4
         self.label_24 = QtWidgets.QLabel(self.centralwidget)
         self.label_24.setEnabled(True)
-        self.label_24.setGeometry(QtCore.QRect(680, 210, 21, 21))
+        self.label_24.setGeometry(QtCore.QRect(190, 210, 21, 21))
         self.label_24.setText("")
         self.label_24.setPixmap(QtGui.QPixmap.fromImage(image))
         self.label_24.setScaledContents(True)
         self.label_24.setObjectName("label_24")
-        self.label_24.noteName = 'B'
+        self.label_24.noteName = 'C#'
         self.label_24.pitchNum = 4
         self.label_25 = QtWidgets.QLabel(self.centralwidget)
         self.label_25.setEnabled(True)
-        self.label_25.setGeometry(QtCore.QRect(130, 250, 21, 21))
+        self.label_25.setGeometry(QtCore.QRect(250, 210, 21, 21))
         self.label_25.setText("")
         self.label_25.setPixmap(QtGui.QPixmap.fromImage(image))
         self.label_25.setScaledContents(True)
         self.label_25.setObjectName("label_25")
-        self.label_25.noteName = 'G#'
-        self.label_25.pitchNum = 3
+        self.label_25.noteName = 'D'
+        self.label_25.pitchNum = 4
         self.label_26 = QtWidgets.QLabel(self.centralwidget)
         self.label_26.setEnabled(True)
-        self.label_26.setGeometry(QtCore.QRect(190, 250, 21, 21))
+        self.label_26.setGeometry(QtCore.QRect(310, 210, 21, 21))
         self.label_26.setText("")
         self.label_26.setPixmap(QtGui.QPixmap.fromImage(image))
         self.label_26.setScaledContents(True)
         self.label_26.setObjectName("label_26")
-        self.label_26.noteName = 'A'
-        self.label_26.pitchNum = 3
+        self.label_26.noteName = 'D#'
+        self.label_26.pitchNum = 4
         self.label_27 = QtWidgets.QLabel(self.centralwidget)
         self.label_27.setEnabled(True)
-        self.label_27.setGeometry(QtCore.QRect(250, 250, 21, 21))
+        self.label_27.setGeometry(QtCore.QRect(360, 210, 21, 21))
         self.label_27.setText("")
         self.label_27.setPixmap(QtGui.QPixmap.fromImage(image))
         self.label_27.setScaledContents(True)
         self.label_27.setObjectName("label_27")
-        self.label_27.noteName = 'A#'
-        self.label_27.pitchNum = 3
+        self.label_27.noteName = 'E'
+        self.label_27.pitchNum = 4
         self.label_28 = QtWidgets.QLabel(self.centralwidget)
         self.label_28.setEnabled(True)
-        self.label_28.setGeometry(QtCore.QRect(310, 250, 21, 21))
+        self.label_28.setGeometry(QtCore.QRect(410, 210, 21, 21))
         self.label_28.setText("")
         self.label_28.setPixmap(QtGui.QPixmap.fromImage(image))
         self.label_28.setScaledContents(True)
         self.label_28.setObjectName("label_28")
-        self.label_28.noteName = 'B'
-        self.label_28.pitchNum = 3
+        self.label_28.noteName = 'F'
+        self.label_28.pitchNum = 4
         self.label_29 = QtWidgets.QLabel(self.centralwidget)
         self.label_29.setEnabled(True)
-        self.label_29.setGeometry(QtCore.QRect(360, 250, 21, 21))
+        self.label_29.setGeometry(QtCore.QRect(460, 210, 21, 21))
         self.label_29.setText("")
         self.label_29.setPixmap(QtGui.QPixmap.fromImage(image))
         self.label_29.setScaledContents(True)
         self.label_29.setObjectName("label_29")
-        self.label_29.noteName = 'C'
+        self.label_29.noteName = 'F#'
         self.label_29.pitchNum = 4
         self.label_30 = QtWidgets.QLabel(self.centralwidget)
         self.label_30.setEnabled(True)
-        self.label_30.setGeometry(QtCore.QRect(410, 250, 21, 21))
+        self.label_30.setGeometry(QtCore.QRect(510, 210, 21, 21))
         self.label_30.setText("")
         self.label_30.setPixmap(QtGui.QPixmap.fromImage(image))
         self.label_30.setScaledContents(True)
         self.label_30.setObjectName("label_30")
-        self.label_30.noteName = 'C#'
+        self.label_30.noteName = 'G'
         self.label_30.pitchNum = 4
         self.label_31 = QtWidgets.QLabel(self.centralwidget)
         self.label_31.setEnabled(True)
-        self.label_31.setGeometry(QtCore.QRect(460, 250, 21, 21))
+        self.label_31.setGeometry(QtCore.QRect(560, 210, 21, 21))
         self.label_31.setText("")
         self.label_31.setPixmap(QtGui.QPixmap.fromImage(image))
         self.label_31.setScaledContents(True)
         self.label_31.setObjectName("label_31")
-        self.label_31.noteName = 'D'
+        self.label_31.noteName = 'G#'
         self.label_31.pitchNum = 4
         self.label_32 = QtWidgets.QLabel(self.centralwidget)
         self.label_32.setEnabled(True)
-        self.label_32.setGeometry(QtCore.QRect(510, 250, 21, 21))
+        self.label_32.setGeometry(QtCore.QRect(600, 210, 21, 21))
         self.label_32.setText("")
         self.label_32.setPixmap(QtGui.QPixmap.fromImage(image))
         self.label_32.setScaledContents(True)
         self.label_32.setObjectName("label_32")
-        self.label_32.noteName = 'D#'
+        self.label_32.noteName = 'A'
         self.label_32.pitchNum = 4
         self.label_33 = QtWidgets.QLabel(self.centralwidget)
         self.label_33.setEnabled(True)
-        self.label_33.setGeometry(QtCore.QRect(560, 250, 21, 21))
+        self.label_33.setGeometry(QtCore.QRect(640, 210, 21, 21))
         self.label_33.setText("")
         self.label_33.setPixmap(QtGui.QPixmap.fromImage(image))
         self.label_33.setScaledContents(True)
         self.label_33.setObjectName("label_33")
-        self.label_33.noteName = 'E'
+        self.label_33.noteName = 'A#'
         self.label_33.pitchNum = 4
         self.label_34 = QtWidgets.QLabel(self.centralwidget)
         self.label_34.setEnabled(True)
-        self.label_34.setGeometry(QtCore.QRect(600, 250, 21, 21))
+        self.label_34.setGeometry(QtCore.QRect(680, 210, 21, 21))
         self.label_34.setText("")
         self.label_34.setPixmap(QtGui.QPixmap.fromImage(image))
         self.label_34.setScaledContents(True)
         self.label_34.setObjectName("label_34")
-        self.label_34.noteName = 'F'
+        self.label_34.noteName = 'B'
         self.label_34.pitchNum = 4
+
         self.label_35 = QtWidgets.QLabel(self.centralwidget)
         self.label_35.setEnabled(True)
-        self.label_35.setGeometry(QtCore.QRect(640, 250, 21, 21))
+        self.label_35.setGeometry(QtCore.QRect(720, 210, 21, 21))
         self.label_35.setText("")
         self.label_35.setPixmap(QtGui.QPixmap.fromImage(image))
         self.label_35.setScaledContents(True)
         self.label_35.setObjectName("label_35")
-        self.label_35.noteName = 'F#'
-        self.label_35.pitchNum = 4
+        self.label_35.noteName = 'C'
+        self.label_35.pitchNum = 5
+
         self.label_36 = QtWidgets.QLabel(self.centralwidget)
         self.label_36.setEnabled(True)
-        self.label_36.setGeometry(QtCore.QRect(680, 250, 21, 21))
+        self.label_36.setGeometry(QtCore.QRect(760, 210, 21, 21))
         self.label_36.setText("")
         self.label_36.setPixmap(QtGui.QPixmap.fromImage(image))
         self.label_36.setScaledContents(True)
         self.label_36.setObjectName("label_36")
-        self.label_36.noteName = 'G'
-        self.label_36.pitchNum = 4
+        self.label_36.noteName = 'C#'
+        self.label_36.pitchNum = 5
+
         self.label_37 = QtWidgets.QLabel(self.centralwidget)
         self.label_37.setEnabled(True)
-        self.label_37.setGeometry(QtCore.QRect(130, 290, 21, 21))
+        self.label_37.setGeometry(QtCore.QRect(800, 210, 21, 21))
         self.label_37.setText("")
         self.label_37.setPixmap(QtGui.QPixmap.fromImage(image))
         self.label_37.setScaledContents(True)
         self.label_37.setObjectName("label_37")
-        self.label_37.noteName = 'D#'
-        self.label_37.pitchNum = 3
+        self.label_37.noteName = 'D'
+        self.label_37.pitchNum = 5
+
         self.label_38 = QtWidgets.QLabel(self.centralwidget)
         self.label_38.setEnabled(True)
-        self.label_38.setGeometry(QtCore.QRect(190, 290, 21, 21))
+        self.label_38.setGeometry(QtCore.QRect(840, 210, 21, 21))
         self.label_38.setText("")
         self.label_38.setPixmap(QtGui.QPixmap.fromImage(image))
         self.label_38.setScaledContents(True)
         self.label_38.setObjectName("label_38")
-        self.label_38.noteName = 'E'
-        self.label_38.pitchNum = 3
+        self.label_38.noteName = 'D#'
+        self.label_38.pitchNum = 5
+
         self.label_39 = QtWidgets.QLabel(self.centralwidget)
         self.label_39.setEnabled(True)
-        self.label_39.setGeometry(QtCore.QRect(250, 290, 21, 21))
+        self.label_39.setGeometry(QtCore.QRect(880, 210, 21, 21))
         self.label_39.setText("")
         self.label_39.setPixmap(QtGui.QPixmap.fromImage(image))
         self.label_39.setScaledContents(True)
         self.label_39.setObjectName("label_39")
-        self.label_39.noteName = 'F'
-        self.label_39.pitchNum = 3
+        self.label_39.noteName = 'E'
+        self.label_39.pitchNum = 5
+
         self.label_40 = QtWidgets.QLabel(self.centralwidget)
         self.label_40.setEnabled(True)
-        self.label_40.setGeometry(QtCore.QRect(310, 290, 21, 21))
+        self.label_40.setGeometry(QtCore.QRect(920, 210, 21, 21))
         self.label_40.setText("")
         self.label_40.setPixmap(QtGui.QPixmap.fromImage(image))
         self.label_40.setScaledContents(True)
         self.label_40.setObjectName("label_40")
-        self.label_40.noteName = 'F#'
-        self.label_40.pitchNum = 3
+        self.label_40.noteName = 'F'
+        self.label_40.pitchNum = 5
+
         self.label_41 = QtWidgets.QLabel(self.centralwidget)
         self.label_41.setEnabled(True)
-        self.label_41.setGeometry(QtCore.QRect(360, 290, 21, 21))
+        self.label_41.setGeometry(QtCore.QRect(960, 210, 21, 21))
         self.label_41.setText("")
         self.label_41.setPixmap(QtGui.QPixmap.fromImage(image))
         self.label_41.setScaledContents(True)
         self.label_41.setObjectName("label_41")
-        self.label_41.noteName = 'G'
-        self.label_41.pitchNum = 3
+        self.label_41.noteName = 'F#'
+        self.label_41.pitchNum = 5
+
         self.label_42 = QtWidgets.QLabel(self.centralwidget)
         self.label_42.setEnabled(True)
-        self.label_42.setGeometry(QtCore.QRect(410, 290, 21, 21))
+        self.label_42.setGeometry(QtCore.QRect(1000, 210, 21, 21))
         self.label_42.setText("")
         self.label_42.setPixmap(QtGui.QPixmap.fromImage(image))
         self.label_42.setScaledContents(True)
         self.label_42.setObjectName("label_42")
-        self.label_42.noteName = 'G#'
-        self.label_42.pitchNum = 3
+        self.label_42.noteName = 'G'
+        self.label_42.pitchNum = 5
+
         self.label_43 = QtWidgets.QLabel(self.centralwidget)
         self.label_43.setEnabled(True)
-        self.label_43.setGeometry(QtCore.QRect(460, 290, 21, 21))
+        self.label_43.setGeometry(QtCore.QRect(1040, 210, 21, 21))
         self.label_43.setText("")
         self.label_43.setPixmap(QtGui.QPixmap.fromImage(image))
         self.label_43.setScaledContents(True)
         self.label_43.setObjectName("label_43")
-        self.label_43.noteName = 'A'
-        self.label_43.pitchNum = 3
+        self.label_43.noteName = 'G#'
+        self.label_43.pitchNum = 5
+
         self.label_44 = QtWidgets.QLabel(self.centralwidget)
         self.label_44.setEnabled(True)
-        self.label_44.setGeometry(QtCore.QRect(510, 290, 21, 21))
+        self.label_44.setGeometry(QtCore.QRect(1080, 210, 21, 21))
         self.label_44.setText("")
         self.label_44.setPixmap(QtGui.QPixmap.fromImage(image))
         self.label_44.setScaledContents(True)
         self.label_44.setObjectName("label_44")
-        self.label_44.noteName = 'A#'
-        self.label_44.pitchNum = 3
+        self.label_44.noteName = 'A'
+        self.label_44.pitchNum = 5
+
         self.label_45 = QtWidgets.QLabel(self.centralwidget)
         self.label_45.setEnabled(True)
-        self.label_45.setGeometry(QtCore.QRect(560, 290, 21, 21))
+        self.label_45.setGeometry(QtCore.QRect(130, 250, 21, 21))
         self.label_45.setText("")
         self.label_45.setPixmap(QtGui.QPixmap.fromImage(image))
         self.label_45.setScaledContents(True)
         self.label_45.setObjectName("label_45")
-        self.label_45.noteName = 'B'
+        self.label_45.noteName = 'G#'
         self.label_45.pitchNum = 3
         self.label_46 = QtWidgets.QLabel(self.centralwidget)
         self.label_46.setEnabled(True)
-        self.label_46.setGeometry(QtCore.QRect(600, 290, 21, 21))
+        self.label_46.setGeometry(QtCore.QRect(190, 250, 21, 21))
         self.label_46.setText("")
         self.label_46.setPixmap(QtGui.QPixmap.fromImage(image))
         self.label_46.setScaledContents(True)
         self.label_46.setObjectName("label_46")
-        self.label_46.noteName = 'C'
-        self.label_46.pitchNum = 4
+        self.label_46.noteName = 'A'
+        self.label_46.pitchNum = 3
         self.label_47 = QtWidgets.QLabel(self.centralwidget)
         self.label_47.setEnabled(True)
-        self.label_47.setGeometry(QtCore.QRect(640, 290, 21, 21))
+        self.label_47.setGeometry(QtCore.QRect(250, 250, 21, 21))
         self.label_47.setText("")
         self.label_47.setPixmap(QtGui.QPixmap.fromImage(image))
         self.label_47.setScaledContents(True)
         self.label_47.setObjectName("label_47")
-        self.label_47.noteName = 'C#'
-        self.label_47.pitchNum = 4
+        self.label_47.noteName = 'A#'
+        self.label_47.pitchNum = 3
         self.label_48 = QtWidgets.QLabel(self.centralwidget)
         self.label_48.setEnabled(True)
-        self.label_48.setGeometry(QtCore.QRect(680, 290, 21, 21))
+        self.label_48.setGeometry(QtCore.QRect(310, 250, 21, 21))
         self.label_48.setText("")
         self.label_48.setPixmap(QtGui.QPixmap.fromImage(image))
         self.label_48.setScaledContents(True)
         self.label_48.setObjectName("label_48")
-        self.label_48.noteName = 'D'
-        self.label_48.pitchNum = 4
+        self.label_48.noteName = 'B'
+        self.label_48.pitchNum = 3
         self.label_49 = QtWidgets.QLabel(self.centralwidget)
         self.label_49.setEnabled(True)
-        self.label_49.setGeometry(QtCore.QRect(130, 330, 21, 21))
+        self.label_49.setGeometry(QtCore.QRect(360, 250, 21, 21))
         self.label_49.setText("")
         self.label_49.setPixmap(QtGui.QPixmap.fromImage(image))
         self.label_49.setScaledContents(True)
         self.label_49.setObjectName("label_49")
-        self.label_49.noteName = 'A#'
-        self.label_49.pitchNum = 2
+        self.label_49.noteName = 'C'
+        self.label_49.pitchNum = 4
         self.label_50 = QtWidgets.QLabel(self.centralwidget)
         self.label_50.setEnabled(True)
-        self.label_50.setGeometry(QtCore.QRect(190, 330, 21, 21))
+        self.label_50.setGeometry(QtCore.QRect(410, 250, 21, 21))
         self.label_50.setText("")
         self.label_50.setPixmap(QtGui.QPixmap.fromImage(image))
         self.label_50.setScaledContents(True)
         self.label_50.setObjectName("label_50")
-        self.label_50.noteName = 'B'
-        self.label_50.pitchNum = 2
+        self.label_50.noteName = 'C#'
+        self.label_50.pitchNum = 4
         self.label_51 = QtWidgets.QLabel(self.centralwidget)
         self.label_51.setEnabled(True)
-        self.label_51.setGeometry(QtCore.QRect(250, 330, 21, 21))
+        self.label_51.setGeometry(QtCore.QRect(460, 250, 21, 21))
         self.label_51.setText("")
         self.label_51.setPixmap(QtGui.QPixmap.fromImage(image))
         self.label_51.setScaledContents(True)
         self.label_51.setObjectName("label_51")
-        self.label_51.noteName = 'C'
-        self.label_51.pitchNum = 3
+        self.label_51.noteName = 'D'
+        self.label_51.pitchNum = 4
         self.label_52 = QtWidgets.QLabel(self.centralwidget)
         self.label_52.setEnabled(True)
-        self.label_52.setGeometry(QtCore.QRect(310, 330, 21, 21))
+        self.label_52.setGeometry(QtCore.QRect(510, 250, 21, 21))
         self.label_52.setText("")
         self.label_52.setPixmap(QtGui.QPixmap.fromImage(image))
         self.label_52.setScaledContents(True)
         self.label_52.setObjectName("label_52")
-        self.label_52.noteName = 'C#'
-        self.label_52.pitchNum = 3
+        self.label_52.noteName = 'D#'
+        self.label_52.pitchNum = 4
         self.label_53 = QtWidgets.QLabel(self.centralwidget)
         self.label_53.setEnabled(True)
-        self.label_53.setGeometry(QtCore.QRect(360, 330, 21, 21))
+        self.label_53.setGeometry(QtCore.QRect(560, 250, 21, 21))
         self.label_53.setText("")
         self.label_53.setPixmap(QtGui.QPixmap.fromImage(image))
         self.label_53.setScaledContents(True)
         self.label_53.setObjectName("label_53")
-        self.label_53.noteName = 'D'
-        self.label_53.pitchNum = 3
+        self.label_53.noteName = 'E'
+        self.label_53.pitchNum = 4
         self.label_54 = QtWidgets.QLabel(self.centralwidget)
         self.label_54.setEnabled(True)
-        self.label_54.setGeometry(QtCore.QRect(410, 330, 21, 21))
+        self.label_54.setGeometry(QtCore.QRect(600, 250, 21, 21))
         self.label_54.setText("")
         self.label_54.setPixmap(QtGui.QPixmap.fromImage(image))
         self.label_54.setScaledContents(True)
         self.label_54.setObjectName("label_54")
-        self.label_54.noteName = 'D#'
-        self.label_54.pitchNum = 3
+        self.label_54.noteName = 'F'
+        self.label_54.pitchNum = 4
         self.label_55 = QtWidgets.QLabel(self.centralwidget)
         self.label_55.setEnabled(True)
-        self.label_55.setGeometry(QtCore.QRect(460, 330, 21, 21))
+        self.label_55.setGeometry(QtCore.QRect(640, 250, 21, 21))
         self.label_55.setText("")
         self.label_55.setPixmap(QtGui.QPixmap.fromImage(image))
         self.label_55.setScaledContents(True)
         self.label_55.setObjectName("label_55")
-        self.label_55.noteName = 'E'
-        self.label_55.pitchNum = 3
+        self.label_55.noteName = 'F#'
+        self.label_55.pitchNum = 4
         self.label_56 = QtWidgets.QLabel(self.centralwidget)
         self.label_56.setEnabled(True)
-        self.label_56.setGeometry(QtCore.QRect(510, 330, 21, 21))
+        self.label_56.setGeometry(QtCore.QRect(680, 250, 21, 21))
         self.label_56.setText("")
         self.label_56.setPixmap(QtGui.QPixmap.fromImage(image))
         self.label_56.setScaledContents(True)
         self.label_56.setObjectName("label_56")
-        self.label_56.noteName = 'F'
-        self.label_56.pitchNum = 3
+        self.label_56.noteName = 'G'
+        self.label_56.pitchNum = 4
+
         self.label_57 = QtWidgets.QLabel(self.centralwidget)
         self.label_57.setEnabled(True)
-        self.label_57.setGeometry(QtCore.QRect(560, 330, 21, 21))
+        self.label_57.setGeometry(QtCore.QRect(720, 250, 21, 21))
         self.label_57.setText("")
         self.label_57.setPixmap(QtGui.QPixmap.fromImage(image))
         self.label_57.setScaledContents(True)
         self.label_57.setObjectName("label_57")
-        self.label_57.noteName = 'F#'
-        self.label_57.pitchNum = 3
+        self.label_57.noteName = 'G#'
+        self.label_57.pitchNum = 4
+
         self.label_58 = QtWidgets.QLabel(self.centralwidget)
         self.label_58.setEnabled(True)
-        self.label_58.setGeometry(QtCore.QRect(600, 330, 21, 21))
+        self.label_58.setGeometry(QtCore.QRect(760, 250, 21, 21))
         self.label_58.setText("")
         self.label_58.setPixmap(QtGui.QPixmap.fromImage(image))
         self.label_58.setScaledContents(True)
         self.label_58.setObjectName("label_58")
-        self.label_58.noteName = 'G'
-        self.label_58.pitchNum = 3
+        self.label_58.noteName = 'A'
+        self.label_58.pitchNum = 4
+
         self.label_59 = QtWidgets.QLabel(self.centralwidget)
         self.label_59.setEnabled(True)
-        self.label_59.setGeometry(QtCore.QRect(640, 330, 21, 21))
+        self.label_59.setGeometry(QtCore.QRect(800, 250, 21, 21))
         self.label_59.setText("")
         self.label_59.setPixmap(QtGui.QPixmap.fromImage(image))
         self.label_59.setScaledContents(True)
         self.label_59.setObjectName("label_59")
-        self.label_59.noteName = 'G#'
-        self.label_59.pitchNum = 3
+        self.label_59.noteName = 'A#'
+        self.label_59.pitchNum = 4
+
         self.label_60 = QtWidgets.QLabel(self.centralwidget)
         self.label_60.setEnabled(True)
-        self.label_60.setGeometry(QtCore.QRect(680, 330, 21, 21))
+        self.label_60.setGeometry(QtCore.QRect(840, 250, 21, 21))
         self.label_60.setText("")
         self.label_60.setPixmap(QtGui.QPixmap.fromImage(image))
         self.label_60.setScaledContents(True)
         self.label_60.setObjectName("label_60")
-        self.label_60.noteName = 'A'
-        self.label_60.pitchNum = 3
+        self.label_60.noteName = 'B'
+        self.label_60.pitchNum = 4
+
         self.label_61 = QtWidgets.QLabel(self.centralwidget)
         self.label_61.setEnabled(True)
-        self.label_61.setGeometry(QtCore.QRect(130, 370, 21, 21))
+        self.label_61.setGeometry(QtCore.QRect(880, 250, 21, 21))
         self.label_61.setText("")
         self.label_61.setPixmap(QtGui.QPixmap.fromImage(image))
         self.label_61.setScaledContents(True)
         self.label_61.setObjectName("label_61")
-        self.label_61.noteName = 'F'
-        self.label_61.pitchNum = 2
+        self.label_61.noteName = 'C'
+        self.label_61.pitchNum = 5
+
         self.label_62 = QtWidgets.QLabel(self.centralwidget)
         self.label_62.setEnabled(True)
-        self.label_62.setGeometry(QtCore.QRect(190, 370, 21, 21))
+        self.label_62.setGeometry(QtCore.QRect(920, 250, 21, 21))
         self.label_62.setText("")
         self.label_62.setPixmap(QtGui.QPixmap.fromImage(image))
         self.label_62.setScaledContents(True)
         self.label_62.setObjectName("label_62")
-        self.label_62.noteName = 'F#'
-        self.label_62.pitchNum = 2
+        self.label_62.noteName = 'C#'
+        self.label_62.pitchNum = 5
+
         self.label_63 = QtWidgets.QLabel(self.centralwidget)
         self.label_63.setEnabled(True)
-        self.label_63.setGeometry(QtCore.QRect(250, 370, 21, 21))
+        self.label_63.setGeometry(QtCore.QRect(960, 250, 21, 21))
         self.label_63.setText("")
         self.label_63.setPixmap(QtGui.QPixmap.fromImage(image))
         self.label_63.setScaledContents(True)
         self.label_63.setObjectName("label_63")
-        self.label_63.noteName = 'G'
-        self.label_63.pitchNum = 2
+        self.label_63.noteName = 'D'
+        self.label_63.pitchNum = 5
+
         self.label_64 = QtWidgets.QLabel(self.centralwidget)
         self.label_64.setEnabled(True)
-        self.label_64.setGeometry(QtCore.QRect(310, 370, 21, 21))
+        self.label_64.setGeometry(QtCore.QRect(1000, 250, 21, 21))
         self.label_64.setText("")
         self.label_64.setPixmap(QtGui.QPixmap.fromImage(image))
         self.label_64.setScaledContents(True)
         self.label_64.setObjectName("label_64")
-        self.label_64.noteName = 'G#'
-        self.label_64.pitchNum = 2
+        self.label_64.noteName = 'D#'
+        self.label_64.pitchNum = 5
+
         self.label_65 = QtWidgets.QLabel(self.centralwidget)
         self.label_65.setEnabled(True)
-        self.label_65.setGeometry(QtCore.QRect(360, 370, 21, 21))
+        self.label_65.setGeometry(QtCore.QRect(1040, 250, 21, 21))
         self.label_65.setText("")
         self.label_65.setPixmap(QtGui.QPixmap.fromImage(image))
         self.label_65.setScaledContents(True)
         self.label_65.setObjectName("label_65")
-        self.label_65.noteName = 'A'
-        self.label_65.pitchNum = 2
+        self.label_65.noteName = 'E'
+        self.label_65.pitchNum = 5
+
         self.label_66 = QtWidgets.QLabel(self.centralwidget)
         self.label_66.setEnabled(True)
-        self.label_66.setGeometry(QtCore.QRect(410, 370, 21, 21))
+        self.label_66.setGeometry(QtCore.QRect(1080, 250, 21, 21))
         self.label_66.setText("")
         self.label_66.setPixmap(QtGui.QPixmap.fromImage(image))
         self.label_66.setScaledContents(True)
         self.label_66.setObjectName("label_66")
-        self.label_66.noteName = 'A#'
-        self.label_66.pitchNum = 2
+        self.label_66.noteName = 'F'
+        self.label_66.pitchNum = 5
+
         self.label_67 = QtWidgets.QLabel(self.centralwidget)
         self.label_67.setEnabled(True)
-        self.label_67.setGeometry(QtCore.QRect(460, 370, 21, 21))
+        self.label_67.setGeometry(QtCore.QRect(130, 290, 21, 21))
         self.label_67.setText("")
         self.label_67.setPixmap(QtGui.QPixmap.fromImage(image))
         self.label_67.setScaledContents(True)
         self.label_67.setObjectName("label_67")
-        self.label_67.noteName = 'B'
-        self.label_67.pitchNum = 2
+        self.label_67.noteName = 'D#'
+        self.label_67.pitchNum = 3
         self.label_68 = QtWidgets.QLabel(self.centralwidget)
         self.label_68.setEnabled(True)
-        self.label_68.setGeometry(QtCore.QRect(510, 370, 21, 21))
+        self.label_68.setGeometry(QtCore.QRect(190, 290, 21, 21))
         self.label_68.setText("")
         self.label_68.setPixmap(QtGui.QPixmap.fromImage(image))
         self.label_68.setScaledContents(True)
         self.label_68.setObjectName("label_68")
-        self.label_68.noteName = 'C'
+        self.label_68.noteName = 'E'
         self.label_68.pitchNum = 3
         self.label_69 = QtWidgets.QLabel(self.centralwidget)
         self.label_69.setEnabled(True)
-        self.label_69.setGeometry(QtCore.QRect(560, 370, 21, 21))
+        self.label_69.setGeometry(QtCore.QRect(250, 290, 21, 21))
         self.label_69.setText("")
         self.label_69.setPixmap(QtGui.QPixmap.fromImage(image))
         self.label_69.setScaledContents(True)
         self.label_69.setObjectName("label_69")
-        self.label_69.noteName = 'C#'
+        self.label_69.noteName = 'F'
         self.label_69.pitchNum = 3
         self.label_70 = QtWidgets.QLabel(self.centralwidget)
         self.label_70.setEnabled(True)
-        self.label_70.setGeometry(QtCore.QRect(600, 370, 21, 21))
+        self.label_70.setGeometry(QtCore.QRect(310, 290, 21, 21))
         self.label_70.setText("")
         self.label_70.setPixmap(QtGui.QPixmap.fromImage(image))
         self.label_70.setScaledContents(True)
         self.label_70.setObjectName("label_70")
-        self.label_70.noteName = 'D'
+        self.label_70.noteName = 'F#'
         self.label_70.pitchNum = 3
         self.label_71 = QtWidgets.QLabel(self.centralwidget)
         self.label_71.setEnabled(True)
-        self.label_71.setGeometry(QtCore.QRect(640, 370, 21, 21))
+        self.label_71.setGeometry(QtCore.QRect(360, 290, 21, 21))
         self.label_71.setText("")
         self.label_71.setPixmap(QtGui.QPixmap.fromImage(image))
         self.label_71.setScaledContents(True)
         self.label_71.setObjectName("label_71")
-        self.label_71.noteName = 'D#'
+        self.label_71.noteName = 'G'
         self.label_71.pitchNum = 3
         self.label_72 = QtWidgets.QLabel(self.centralwidget)
         self.label_72.setEnabled(True)
-        self.label_72.setGeometry(QtCore.QRect(680, 370, 21, 21))
+        self.label_72.setGeometry(QtCore.QRect(410, 290, 21, 21))
         self.label_72.setText("")
         self.label_72.setPixmap(QtGui.QPixmap.fromImage(image))
         self.label_72.setScaledContents(True)
         self.label_72.setObjectName("label_72")
-        self.label_72.noteName = 'E'
+        self.label_72.noteName = 'G#'
         self.label_72.pitchNum = 3
-
-        ######################## Fret 13 to 22 ######################
-
         self.label_73 = QtWidgets.QLabel(self.centralwidget)
         self.label_73.setEnabled(True)
-        self.label_73.setGeometry(QtCore.QRect(720, 170, 21, 21))
+        self.label_73.setGeometry(QtCore.QRect(460, 290, 21, 21))
         self.label_73.setText("")
         self.label_73.setPixmap(QtGui.QPixmap.fromImage(image))
         self.label_73.setScaledContents(True)
         self.label_73.setObjectName("label_73")
-        self.label_73.noteName = 'F'
-        self.label_73.pitchNum = 5
-
+        self.label_73.noteName = 'A'
+        self.label_73.pitchNum = 3
         self.label_74 = QtWidgets.QLabel(self.centralwidget)
         self.label_74.setEnabled(True)
-        self.label_74.setGeometry(QtCore.QRect(760, 170, 21, 21))
+        self.label_74.setGeometry(QtCore.QRect(510, 290, 21, 21))
         self.label_74.setText("")
         self.label_74.setPixmap(QtGui.QPixmap.fromImage(image))
         self.label_74.setScaledContents(True)
         self.label_74.setObjectName("label_74")
-        self.label_74.noteName = 'F#'
-        self.label_74.pitchNum = 5
-
+        self.label_74.noteName = 'A#'
+        self.label_74.pitchNum = 3
         self.label_75 = QtWidgets.QLabel(self.centralwidget)
         self.label_75.setEnabled(True)
-        self.label_75.setGeometry(QtCore.QRect(800, 170, 21, 21))
+        self.label_75.setGeometry(QtCore.QRect(560, 290, 21, 21))
         self.label_75.setText("")
         self.label_75.setPixmap(QtGui.QPixmap.fromImage(image))
         self.label_75.setScaledContents(True)
         self.label_75.setObjectName("label_75")
-        self.label_75.noteName = 'G'
-        self.label_75.pitchNum = 5
-
+        self.label_75.noteName = 'B'
+        self.label_75.pitchNum = 3
         self.label_76 = QtWidgets.QLabel(self.centralwidget)
         self.label_76.setEnabled(True)
-        self.label_76.setGeometry(QtCore.QRect(840, 170, 21, 21))
+        self.label_76.setGeometry(QtCore.QRect(600, 290, 21, 21))
         self.label_76.setText("")
         self.label_76.setPixmap(QtGui.QPixmap.fromImage(image))
         self.label_76.setScaledContents(True)
         self.label_76.setObjectName("label_76")
-        self.label_76.noteName = 'G#'
-        self.label_76.pitchNum = 5
-
+        self.label_76.noteName = 'C'
+        self.label_76.pitchNum = 4
         self.label_77 = QtWidgets.QLabel(self.centralwidget)
         self.label_77.setEnabled(True)
-        self.label_77.setGeometry(QtCore.QRect(880, 170, 21, 21))
+        self.label_77.setGeometry(QtCore.QRect(640, 290, 21, 21))
         self.label_77.setText("")
         self.label_77.setPixmap(QtGui.QPixmap.fromImage(image))
         self.label_77.setScaledContents(True)
         self.label_77.setObjectName("label_77")
-        self.label_77.noteName = 'A'
-        self.label_77.pitchNum = 5
-
+        self.label_77.noteName = 'C#'
+        self.label_77.pitchNum = 4
         self.label_78 = QtWidgets.QLabel(self.centralwidget)
         self.label_78.setEnabled(True)
-        self.label_78.setGeometry(QtCore.QRect(920, 170, 21, 21))
+        self.label_78.setGeometry(QtCore.QRect(680, 290, 21, 21))
         self.label_78.setText("")
         self.label_78.setPixmap(QtGui.QPixmap.fromImage(image))
         self.label_78.setScaledContents(True)
         self.label_78.setObjectName("label_78")
-        self.label_78.noteName = 'A#'
-        self.label_78.pitchNum = 5
+        self.label_78.noteName = 'D'
+        self.label_78.pitchNum = 4
 
         self.label_79 = QtWidgets.QLabel(self.centralwidget)
         self.label_79.setEnabled(True)
-        self.label_79.setGeometry(QtCore.QRect(960, 170, 21, 21))
+        self.label_79.setGeometry(QtCore.QRect(720, 290, 21, 21))
         self.label_79.setText("")
         self.label_79.setPixmap(QtGui.QPixmap.fromImage(image))
         self.label_79.setScaledContents(True)
         self.label_79.setObjectName("label_79")
-        self.label_79.noteName = 'B'
-        self.label_79.pitchNum = 5
+        self.label_79.noteName = 'D#'
+        self.label_79.pitchNum = 4
 
         self.label_80 = QtWidgets.QLabel(self.centralwidget)
         self.label_80.setEnabled(True)
-        self.label_80.setGeometry(QtCore.QRect(1000, 170, 21, 21))
+        self.label_80.setGeometry(QtCore.QRect(760, 290, 21, 21))
         self.label_80.setText("")
         self.label_80.setPixmap(QtGui.QPixmap.fromImage(image))
         self.label_80.setScaledContents(True)
         self.label_80.setObjectName("label_80")
-        self.label_80.noteName = 'C'
-        self.label_80.pitchNum = 6
+        self.label_80.noteName = 'E'
+        self.label_80.pitchNum = 4
 
         self.label_81 = QtWidgets.QLabel(self.centralwidget)
         self.label_81.setEnabled(True)
-        self.label_81.setGeometry(QtCore.QRect(1040, 170, 21, 21))
+        self.label_81.setGeometry(QtCore.QRect(800, 290, 21, 21))
         self.label_81.setText("")
         self.label_81.setPixmap(QtGui.QPixmap.fromImage(image))
         self.label_81.setScaledContents(True)
         self.label_81.setObjectName("label_81")
-        self.label_81.noteName = 'C#'
-        self.label_81.pitchNum = 6
+        self.label_81.noteName = 'F'
+        self.label_81.pitchNum = 4
 
         self.label_82 = QtWidgets.QLabel(self.centralwidget)
         self.label_82.setEnabled(True)
-        self.label_82.setGeometry(QtCore.QRect(1080, 170, 21, 21))
+        self.label_82.setGeometry(QtCore.QRect(840, 290, 21, 21))
         self.label_82.setText("")
         self.label_82.setPixmap(QtGui.QPixmap.fromImage(image))
         self.label_82.setScaledContents(True)
         self.label_82.setObjectName("label_82")
-        self.label_82.noteName = 'D'
-        self.label_82.pitchNum = 6
+        self.label_82.noteName = 'F#'
+        self.label_82.pitchNum = 4
 
         self.label_83 = QtWidgets.QLabel(self.centralwidget)
         self.label_83.setEnabled(True)
-        self.label_83.setGeometry(QtCore.QRect(720, 210, 21, 21))
+        self.label_83.setGeometry(QtCore.QRect(880, 290, 21, 21))
         self.label_83.setText("")
         self.label_83.setPixmap(QtGui.QPixmap.fromImage(image))
         self.label_83.setScaledContents(True)
         self.label_83.setObjectName("label_83")
-        self.label_83.noteName = 'C'
-        self.label_83.pitchNum = 5
+        self.label_83.noteName = 'G'
+        self.label_83.pitchNum = 4
 
         self.label_84 = QtWidgets.QLabel(self.centralwidget)
         self.label_84.setEnabled(True)
-        self.label_84.setGeometry(QtCore.QRect(760, 210, 21, 21))
+        self.label_84.setGeometry(QtCore.QRect(920, 290, 21, 21))
         self.label_84.setText("")
         self.label_84.setPixmap(QtGui.QPixmap.fromImage(image))
         self.label_84.setScaledContents(True)
         self.label_84.setObjectName("label_84")
-        self.label_84.noteName = 'C#'
-        self.label_84.pitchNum = 5
+        self.label_84.noteName = 'G#'
+        self.label_84.pitchNum = 4
 
         self.label_85 = QtWidgets.QLabel(self.centralwidget)
         self.label_85.setEnabled(True)
-        self.label_85.setGeometry(QtCore.QRect(800, 210, 21, 21))
+        self.label_85.setGeometry(QtCore.QRect(960, 290, 21, 21))
         self.label_85.setText("")
         self.label_85.setPixmap(QtGui.QPixmap.fromImage(image))
         self.label_85.setScaledContents(True)
         self.label_85.setObjectName("label_85")
-        self.label_85.noteName = 'D'
-        self.label_85.pitchNum = 5
+        self.label_85.noteName = 'A'
+        self.label_85.pitchNum = 4
 
         self.label_86 = QtWidgets.QLabel(self.centralwidget)
         self.label_86.setEnabled(True)
-        self.label_86.setGeometry(QtCore.QRect(840, 210, 21, 21))
+        self.label_86.setGeometry(QtCore.QRect(1000, 290, 21, 21))
         self.label_86.setText("")
         self.label_86.setPixmap(QtGui.QPixmap.fromImage(image))
         self.label_86.setScaledContents(True)
         self.label_86.setObjectName("label_86")
-        self.label_86.noteName = 'D#'
-        self.label_86.pitchNum = 5
+        self.label_86.noteName = 'A#'
+        self.label_86.pitchNum = 4
 
         self.label_87 = QtWidgets.QLabel(self.centralwidget)
         self.label_87.setEnabled(True)
-        self.label_87.setGeometry(QtCore.QRect(880, 210, 21, 21))
+        self.label_87.setGeometry(QtCore.QRect(1040, 290, 21, 21))
         self.label_87.setText("")
         self.label_87.setPixmap(QtGui.QPixmap.fromImage(image))
         self.label_87.setScaledContents(True)
         self.label_87.setObjectName("label_87")
-        self.label_87.noteName = 'E'
-        self.label_87.pitchNum = 5
+        self.label_87.noteName = 'B'
+        self.label_87.pitchNum = 4
 
         self.label_88 = QtWidgets.QLabel(self.centralwidget)
         self.label_88.setEnabled(True)
-        self.label_88.setGeometry(QtCore.QRect(920, 210, 21, 21))
+        self.label_88.setGeometry(QtCore.QRect(1080, 290, 21, 21))
         self.label_88.setText("")
         self.label_88.setPixmap(QtGui.QPixmap.fromImage(image))
         self.label_88.setScaledContents(True)
         self.label_88.setObjectName("label_88")
-        self.label_88.noteName = 'F'
+        self.label_88.noteName = 'C'
         self.label_88.pitchNum = 5
 
         self.label_89 = QtWidgets.QLabel(self.centralwidget)
         self.label_89.setEnabled(True)
-        self.label_89.setGeometry(QtCore.QRect(960, 210, 21, 21))
+        self.label_89.setGeometry(QtCore.QRect(130, 330, 21, 21))
         self.label_89.setText("")
         self.label_89.setPixmap(QtGui.QPixmap.fromImage(image))
         self.label_89.setScaledContents(True)
         self.label_89.setObjectName("label_89")
-        self.label_89.noteName = 'F#'
-        self.label_89.pitchNum = 5
-
+        self.label_89.noteName = 'A#'
+        self.label_89.pitchNum = 2
         self.label_90 = QtWidgets.QLabel(self.centralwidget)
         self.label_90.setEnabled(True)
-        self.label_90.setGeometry(QtCore.QRect(1000, 210, 21, 21))
+        self.label_90.setGeometry(QtCore.QRect(190, 330, 21, 21))
         self.label_90.setText("")
         self.label_90.setPixmap(QtGui.QPixmap.fromImage(image))
         self.label_90.setScaledContents(True)
         self.label_90.setObjectName("label_90")
-        self.label_90.noteName = 'G'
-        self.label_90.pitchNum = 5
-
+        self.label_90.noteName = 'B'
+        self.label_90.pitchNum = 2
         self.label_91 = QtWidgets.QLabel(self.centralwidget)
         self.label_91.setEnabled(True)
-        self.label_91.setGeometry(QtCore.QRect(1040, 210, 21, 21))
+        self.label_91.setGeometry(QtCore.QRect(250, 330, 21, 21))
         self.label_91.setText("")
         self.label_91.setPixmap(QtGui.QPixmap.fromImage(image))
         self.label_91.setScaledContents(True)
         self.label_91.setObjectName("label_91")
-        self.label_91.noteName = 'G#'
-        self.label_91.pitchNum = 5
-
+        self.label_91.noteName = 'C'
+        self.label_91.pitchNum = 3
         self.label_92 = QtWidgets.QLabel(self.centralwidget)
         self.label_92.setEnabled(True)
-        self.label_92.setGeometry(QtCore.QRect(1080, 210, 21, 21))
+        self.label_92.setGeometry(QtCore.QRect(310, 330, 21, 21))
         self.label_92.setText("")
         self.label_92.setPixmap(QtGui.QPixmap.fromImage(image))
         self.label_92.setScaledContents(True)
         self.label_92.setObjectName("label_92")
-        self.label_92.noteName = 'A'
-        self.label_92.pitchNum = 5
-
+        self.label_92.noteName = 'C#'
+        self.label_92.pitchNum = 3
         self.label_93 = QtWidgets.QLabel(self.centralwidget)
         self.label_93.setEnabled(True)
-        self.label_93.setGeometry(QtCore.QRect(720, 250, 21, 21))
+        self.label_93.setGeometry(QtCore.QRect(360, 330, 21, 21))
         self.label_93.setText("")
         self.label_93.setPixmap(QtGui.QPixmap.fromImage(image))
         self.label_93.setScaledContents(True)
         self.label_93.setObjectName("label_93")
-        self.label_93.noteName = 'G#'
-        self.label_93.pitchNum = 4
-
+        self.label_93.noteName = 'D'
+        self.label_93.pitchNum = 3
         self.label_94 = QtWidgets.QLabel(self.centralwidget)
         self.label_94.setEnabled(True)
-        self.label_94.setGeometry(QtCore.QRect(760, 250, 21, 21))
+        self.label_94.setGeometry(QtCore.QRect(410, 330, 21, 21))
         self.label_94.setText("")
         self.label_94.setPixmap(QtGui.QPixmap.fromImage(image))
         self.label_94.setScaledContents(True)
         self.label_94.setObjectName("label_94")
-        self.label_94.noteName = 'A'
-        self.label_94.pitchNum = 4
-
+        self.label_94.noteName = 'D#'
+        self.label_94.pitchNum = 3
         self.label_95 = QtWidgets.QLabel(self.centralwidget)
         self.label_95.setEnabled(True)
-        self.label_95.setGeometry(QtCore.QRect(800, 250, 21, 21))
+        self.label_95.setGeometry(QtCore.QRect(460, 330, 21, 21))
         self.label_95.setText("")
         self.label_95.setPixmap(QtGui.QPixmap.fromImage(image))
         self.label_95.setScaledContents(True)
         self.label_95.setObjectName("label_95")
-        self.label_95.noteName = 'A#'
-        self.label_95.pitchNum = 4
-
+        self.label_95.noteName = 'E'
+        self.label_95.pitchNum = 3
         self.label_96 = QtWidgets.QLabel(self.centralwidget)
         self.label_96.setEnabled(True)
-        self.label_96.setGeometry(QtCore.QRect(840, 250, 21, 21))
+        self.label_96.setGeometry(QtCore.QRect(510, 330, 21, 21))
         self.label_96.setText("")
         self.label_96.setPixmap(QtGui.QPixmap.fromImage(image))
         self.label_96.setScaledContents(True)
         self.label_96.setObjectName("label_96")
-        self.label_96.noteName = 'B'
-        self.label_96.pitchNum = 4
-
+        self.label_96.noteName = 'F'
+        self.label_96.pitchNum = 3
         self.label_97 = QtWidgets.QLabel(self.centralwidget)
         self.label_97.setEnabled(True)
-        self.label_97.setGeometry(QtCore.QRect(880, 250, 21, 21))
+        self.label_97.setGeometry(QtCore.QRect(560, 330, 21, 21))
         self.label_97.setText("")
         self.label_97.setPixmap(QtGui.QPixmap.fromImage(image))
         self.label_97.setScaledContents(True)
         self.label_97.setObjectName("label_97")
-        self.label_97.noteName = 'C'
-        self.label_97.pitchNum = 5
-
+        self.label_97.noteName = 'F#'
+        self.label_97.pitchNum = 3
         self.label_98 = QtWidgets.QLabel(self.centralwidget)
         self.label_98.setEnabled(True)
-        self.label_98.setGeometry(QtCore.QRect(920, 250, 21, 21))
+        self.label_98.setGeometry(QtCore.QRect(600, 330, 21, 21))
         self.label_98.setText("")
         self.label_98.setPixmap(QtGui.QPixmap.fromImage(image))
         self.label_98.setScaledContents(True)
         self.label_98.setObjectName("label_98")
-        self.label_98.noteName = 'C#'
-        self.label_98.pitchNum = 5
-
+        self.label_98.noteName = 'G'
+        self.label_98.pitchNum = 3
         self.label_99 = QtWidgets.QLabel(self.centralwidget)
         self.label_99.setEnabled(True)
-        self.label_99.setGeometry(QtCore.QRect(960, 250, 21, 21))
+        self.label_99.setGeometry(QtCore.QRect(640, 330, 21, 21))
         self.label_99.setText("")
         self.label_99.setPixmap(QtGui.QPixmap.fromImage(image))
         self.label_99.setScaledContents(True)
         self.label_99.setObjectName("label_99")
-        self.label_99.noteName = 'D'
-        self.label_99.pitchNum = 5
-
+        self.label_99.noteName = 'G#'
+        self.label_99.pitchNum = 3
         self.label_100 = QtWidgets.QLabel(self.centralwidget)
         self.label_100.setEnabled(True)
-        self.label_100.setGeometry(QtCore.QRect(1000, 250, 21, 21))
+        self.label_100.setGeometry(QtCore.QRect(680, 330, 21, 21))
         self.label_100.setText("")
         self.label_100.setPixmap(QtGui.QPixmap.fromImage(image))
         self.label_100.setScaledContents(True)
         self.label_100.setObjectName("label_100")
-        self.label_100.noteName = 'D#'
-        self.label_100.pitchNum = 5
+        self.label_100.noteName = 'A'
+        self.label_100.pitchNum = 3
 
         self.label_101 = QtWidgets.QLabel(self.centralwidget)
         self.label_101.setEnabled(True)
-        self.label_101.setGeometry(QtCore.QRect(1040, 250, 21, 21))
+        self.label_101.setGeometry(QtCore.QRect(720, 330, 21, 21))
         self.label_101.setText("")
         self.label_101.setPixmap(QtGui.QPixmap.fromImage(image))
         self.label_101.setScaledContents(True)
         self.label_101.setObjectName("label_101")
-        self.label_101.noteName = 'E'
-        self.label_101.pitchNum = 5
+        self.label_101.noteName = 'A#'
+        self.label_101.pitchNum = 3
 
         self.label_102 = QtWidgets.QLabel(self.centralwidget)
         self.label_102.setEnabled(True)
-        self.label_102.setGeometry(QtCore.QRect(1080, 250, 21, 21))
+        self.label_102.setGeometry(QtCore.QRect(760, 330, 21, 21))
         self.label_102.setText("")
         self.label_102.setPixmap(QtGui.QPixmap.fromImage(image))
         self.label_102.setScaledContents(True)
         self.label_102.setObjectName("label_102")
-        self.label_102.noteName = 'F'
-        self.label_102.pitchNum = 5
+        self.label_102.noteName = 'B'
+        self.label_102.pitchNum = 3
 
         self.label_103 = QtWidgets.QLabel(self.centralwidget)
         self.label_103.setEnabled(True)
-        self.label_103.setGeometry(QtCore.QRect(720, 290, 21, 21))
+        self.label_103.setGeometry(QtCore.QRect(800, 330, 21, 21))
         self.label_103.setText("")
         self.label_103.setPixmap(QtGui.QPixmap.fromImage(image))
         self.label_103.setScaledContents(True)
         self.label_103.setObjectName("label_103")
-        self.label_103.noteName = 'D#'
+        self.label_103.noteName = 'C'
         self.label_103.pitchNum = 4
 
         self.label_104 = QtWidgets.QLabel(self.centralwidget)
         self.label_104.setEnabled(True)
-        self.label_104.setGeometry(QtCore.QRect(760, 290, 21, 21))
+        self.label_104.setGeometry(QtCore.QRect(840, 330, 21, 21))
         self.label_104.setText("")
         self.label_104.setPixmap(QtGui.QPixmap.fromImage(image))
         self.label_104.setScaledContents(True)
         self.label_104.setObjectName("label_104")
-        self.label_104.noteName = 'E'
+        self.label_104.noteName = 'C#'
         self.label_104.pitchNum = 4
 
         self.label_105 = QtWidgets.QLabel(self.centralwidget)
         self.label_105.setEnabled(True)
-        self.label_105.setGeometry(QtCore.QRect(800, 290, 21, 21))
+        self.label_105.setGeometry(QtCore.QRect(880, 330, 21, 21))
         self.label_105.setText("")
         self.label_105.setPixmap(QtGui.QPixmap.fromImage(image))
         self.label_105.setScaledContents(True)
         self.label_105.setObjectName("label_105")
-        self.label_105.noteName = 'F'
+        self.label_105.noteName = 'D'
         self.label_105.pitchNum = 4
 
         self.label_106 = QtWidgets.QLabel(self.centralwidget)
         self.label_106.setEnabled(True)
-        self.label_106.setGeometry(QtCore.QRect(840, 290, 21, 21))
+        self.label_106.setGeometry(QtCore.QRect(920, 330, 21, 21))
         self.label_106.setText("")
         self.label_106.setPixmap(QtGui.QPixmap.fromImage(image))
         self.label_106.setScaledContents(True)
         self.label_106.setObjectName("label_106")
-        self.label_106.noteName = 'F#'
+        self.label_106.noteName = 'D#'
         self.label_106.pitchNum = 4
 
         self.label_107 = QtWidgets.QLabel(self.centralwidget)
         self.label_107.setEnabled(True)
-        self.label_107.setGeometry(QtCore.QRect(880, 290, 21, 21))
+        self.label_107.setGeometry(QtCore.QRect(960, 330, 21, 21))
         self.label_107.setText("")
         self.label_107.setPixmap(QtGui.QPixmap.fromImage(image))
         self.label_107.setScaledContents(True)
         self.label_107.setObjectName("label_107")
-        self.label_107.noteName = 'G'
+        self.label_107.noteName = 'E'
         self.label_107.pitchNum = 4
 
         self.label_108 = QtWidgets.QLabel(self.centralwidget)
         self.label_108.setEnabled(True)
-        self.label_108.setGeometry(QtCore.QRect(920, 290, 21, 21))
+        self.label_108.setGeometry(QtCore.QRect(1000, 330, 21, 21))
         self.label_108.setText("")
         self.label_108.setPixmap(QtGui.QPixmap.fromImage(image))
         self.label_108.setScaledContents(True)
         self.label_108.setObjectName("label_108")
-        self.label_108.noteName = 'G#'
+        self.label_108.noteName = 'F'
         self.label_108.pitchNum = 4
 
         self.label_109 = QtWidgets.QLabel(self.centralwidget)
         self.label_109.setEnabled(True)
-        self.label_109.setGeometry(QtCore.QRect(960, 290, 21, 21))
+        self.label_109.setGeometry(QtCore.QRect(1040, 330, 21, 21))
         self.label_109.setText("")
         self.label_109.setPixmap(QtGui.QPixmap.fromImage(image))
         self.label_109.setScaledContents(True)
         self.label_109.setObjectName("label_109")
-        self.label_109.noteName = 'A'
+        self.label_109.noteName = 'F#'
         self.label_109.pitchNum = 4
 
         self.label_110 = QtWidgets.QLabel(self.centralwidget)
         self.label_110.setEnabled(True)
-        self.label_110.setGeometry(QtCore.QRect(1000, 290, 21, 21))
+        self.label_110.setGeometry(QtCore.QRect(1080, 330, 21, 21))
         self.label_110.setText("")
         self.label_110.setPixmap(QtGui.QPixmap.fromImage(image))
         self.label_110.setScaledContents(True)
         self.label_110.setObjectName("label_110")
-        self.label_110.noteName = 'A#'
+        self.label_110.noteName = 'G'
         self.label_110.pitchNum = 4
 
         self.label_111 = QtWidgets.QLabel(self.centralwidget)
         self.label_111.setEnabled(True)
-        self.label_111.setGeometry(QtCore.QRect(1040, 290, 21, 21))
+        self.label_111.setGeometry(QtCore.QRect(130, 370, 21, 21))
         self.label_111.setText("")
         self.label_111.setPixmap(QtGui.QPixmap.fromImage(image))
         self.label_111.setScaledContents(True)
         self.label_111.setObjectName("label_111")
-        self.label_111.noteName = 'B'
-        self.label_111.pitchNum = 4
-
+        self.label_111.noteName = 'F'
+        self.label_111.pitchNum = 2
         self.label_112 = QtWidgets.QLabel(self.centralwidget)
         self.label_112.setEnabled(True)
-        self.label_112.setGeometry(QtCore.QRect(1080, 290, 21, 21))
+        self.label_112.setGeometry(QtCore.QRect(190, 370, 21, 21))
         self.label_112.setText("")
         self.label_112.setPixmap(QtGui.QPixmap.fromImage(image))
         self.label_112.setScaledContents(True)
         self.label_112.setObjectName("label_112")
-        self.label_112.noteName = 'C'
-        self.label_112.pitchNum = 5
-
+        self.label_112.noteName = 'F#'
+        self.label_112.pitchNum = 2
         self.label_113 = QtWidgets.QLabel(self.centralwidget)
         self.label_113.setEnabled(True)
-        self.label_113.setGeometry(QtCore.QRect(720, 330, 21, 21))
+        self.label_113.setGeometry(QtCore.QRect(250, 370, 21, 21))
         self.label_113.setText("")
         self.label_113.setPixmap(QtGui.QPixmap.fromImage(image))
         self.label_113.setScaledContents(True)
         self.label_113.setObjectName("label_113")
-        self.label_113.noteName = 'A#'
-        self.label_113.pitchNum = 3
-
+        self.label_113.noteName = 'G'
+        self.label_113.pitchNum = 2
         self.label_114 = QtWidgets.QLabel(self.centralwidget)
         self.label_114.setEnabled(True)
-        self.label_114.setGeometry(QtCore.QRect(760, 330, 21, 21))
+        self.label_114.setGeometry(QtCore.QRect(310, 370, 21, 21))
         self.label_114.setText("")
         self.label_114.setPixmap(QtGui.QPixmap.fromImage(image))
         self.label_114.setScaledContents(True)
         self.label_114.setObjectName("label_114")
-        self.label_114.noteName = 'B'
-        self.label_114.pitchNum = 3
-
+        self.label_114.noteName = 'G#'
+        self.label_114.pitchNum = 2
         self.label_115 = QtWidgets.QLabel(self.centralwidget)
         self.label_115.setEnabled(True)
-        self.label_115.setGeometry(QtCore.QRect(800, 330, 21, 21))
+        self.label_115.setGeometry(QtCore.QRect(360, 370, 21, 21))
         self.label_115.setText("")
         self.label_115.setPixmap(QtGui.QPixmap.fromImage(image))
         self.label_115.setScaledContents(True)
         self.label_115.setObjectName("label_115")
-        self.label_115.noteName = 'C'
-        self.label_115.pitchNum = 4
-
+        self.label_115.noteName = 'A'
+        self.label_115.pitchNum = 2
         self.label_116 = QtWidgets.QLabel(self.centralwidget)
         self.label_116.setEnabled(True)
-        self.label_116.setGeometry(QtCore.QRect(840, 330, 21, 21))
+        self.label_116.setGeometry(QtCore.QRect(410, 370, 21, 21))
         self.label_116.setText("")
         self.label_116.setPixmap(QtGui.QPixmap.fromImage(image))
         self.label_116.setScaledContents(True)
         self.label_116.setObjectName("label_116")
-        self.label_116.noteName = 'C#'
-        self.label_116.pitchNum = 4
-
+        self.label_116.noteName = 'A#'
+        self.label_116.pitchNum = 2
         self.label_117 = QtWidgets.QLabel(self.centralwidget)
         self.label_117.setEnabled(True)
-        self.label_117.setGeometry(QtCore.QRect(880, 330, 21, 21))
+        self.label_117.setGeometry(QtCore.QRect(460, 370, 21, 21))
         self.label_117.setText("")
         self.label_117.setPixmap(QtGui.QPixmap.fromImage(image))
         self.label_117.setScaledContents(True)
         self.label_117.setObjectName("label_117")
-        self.label_117.noteName = 'D'
-        self.label_117.pitchNum = 4
-
+        self.label_117.noteName = 'B'
+        self.label_117.pitchNum = 2
         self.label_118 = QtWidgets.QLabel(self.centralwidget)
         self.label_118.setEnabled(True)
-        self.label_118.setGeometry(QtCore.QRect(920, 330, 21, 21))
+        self.label_118.setGeometry(QtCore.QRect(510, 370, 21, 21))
         self.label_118.setText("")
         self.label_118.setPixmap(QtGui.QPixmap.fromImage(image))
         self.label_118.setScaledContents(True)
         self.label_118.setObjectName("label_118")
-        self.label_118.noteName = 'D#'
-        self.label_118.pitchNum = 4
-
+        self.label_118.noteName = 'C'
+        self.label_118.pitchNum = 3
         self.label_119 = QtWidgets.QLabel(self.centralwidget)
         self.label_119.setEnabled(True)
-        self.label_119.setGeometry(QtCore.QRect(960, 330, 21, 21))
+        self.label_119.setGeometry(QtCore.QRect(560, 370, 21, 21))
         self.label_119.setText("")
         self.label_119.setPixmap(QtGui.QPixmap.fromImage(image))
         self.label_119.setScaledContents(True)
         self.label_119.setObjectName("label_119")
-        self.label_119.noteName = 'E'
-        self.label_119.pitchNum = 4
-
+        self.label_119.noteName = 'C#'
+        self.label_119.pitchNum = 3
         self.label_120 = QtWidgets.QLabel(self.centralwidget)
         self.label_120.setEnabled(True)
-        self.label_120.setGeometry(QtCore.QRect(1000, 330, 21, 21))
+        self.label_120.setGeometry(QtCore.QRect(600, 370, 21, 21))
         self.label_120.setText("")
         self.label_120.setPixmap(QtGui.QPixmap.fromImage(image))
         self.label_120.setScaledContents(True)
         self.label_120.setObjectName("label_120")
-        self.label_120.noteName = 'F'
-        self.label_120.pitchNum = 4
-
+        self.label_120.noteName = 'D'
+        self.label_120.pitchNum = 3
         self.label_121 = QtWidgets.QLabel(self.centralwidget)
         self.label_121.setEnabled(True)
-        self.label_121.setGeometry(QtCore.QRect(1040, 330, 21, 21))
+        self.label_121.setGeometry(QtCore.QRect(640, 370, 21, 21))
         self.label_121.setText("")
         self.label_121.setPixmap(QtGui.QPixmap.fromImage(image))
         self.label_121.setScaledContents(True)
         self.label_121.setObjectName("label_121")
-        self.label_121.noteName = 'F#'
-        self.label_121.pitchNum = 4
-
+        self.label_121.noteName = 'D#'
+        self.label_121.pitchNum = 3
         self.label_122 = QtWidgets.QLabel(self.centralwidget)
         self.label_122.setEnabled(True)
-        self.label_122.setGeometry(QtCore.QRect(1080, 330, 21, 21))
+        self.label_122.setGeometry(QtCore.QRect(680, 370, 21, 21))
         self.label_122.setText("")
         self.label_122.setPixmap(QtGui.QPixmap.fromImage(image))
         self.label_122.setScaledContents(True)
         self.label_122.setObjectName("label_122")
-        self.label_122.noteName = 'G'
-        self.label_122.pitchNum = 4
+        self.label_122.noteName = 'E'
+        self.label_122.pitchNum = 3
 
         self.label_123 = QtWidgets.QLabel(self.centralwidget)
         self.label_123.setEnabled(True)
@@ -4444,6 +4447,42 @@ class Fretboard_ui(object):
         self.label_204.setInputMethodHints(QtCore.Qt.ImhNone)
         self.label_204.setAlignment(QtCore.Qt.AlignCenter)
         self.label_204.setObjectName("label_204")
+        self.label_205 = QtWidgets.QLabel(self.centralwidget)
+        self.label_205.setGeometry(QtCore.QRect(800, 130, 16, 16))
+        font = QtGui.QFont()
+        font.setPointSize(12)
+        self.label_205.setFont(font)
+        self.label_205.setLayoutDirection(QtCore.Qt.LeftToRight)
+        self.label_205.setInputMethodHints(QtCore.Qt.ImhNone)
+        self.label_205.setAlignment(QtCore.Qt.AlignCenter)
+        self.label_205.setObjectName("label_205")
+        self.label_206 = QtWidgets.QLabel(self.centralwidget)
+        self.label_206.setGeometry(QtCore.QRect(880, 130, 16, 16))
+        font = QtGui.QFont()
+        font.setPointSize(12)
+        self.label_206.setFont(font)
+        self.label_206.setLayoutDirection(QtCore.Qt.LeftToRight)
+        self.label_206.setInputMethodHints(QtCore.Qt.ImhNone)
+        self.label_206.setAlignment(QtCore.Qt.AlignCenter)
+        self.label_206.setObjectName("label_206")
+        self.label_207 = QtWidgets.QLabel(self.centralwidget)
+        self.label_207.setGeometry(QtCore.QRect(960, 130, 16, 16))
+        font = QtGui.QFont()
+        font.setPointSize(12)
+        self.label_207.setFont(font)
+        self.label_207.setLayoutDirection(QtCore.Qt.LeftToRight)
+        self.label_207.setInputMethodHints(QtCore.Qt.ImhNone)
+        self.label_207.setAlignment(QtCore.Qt.AlignCenter)
+        self.label_207.setObjectName("label_207")
+        self.label_208 = QtWidgets.QLabel(self.centralwidget)
+        self.label_208.setGeometry(QtCore.QRect(1040, 130, 16, 16))
+        font = QtGui.QFont()
+        font.setPointSize(12)
+        self.label_208.setFont(font)
+        self.label_208.setLayoutDirection(QtCore.Qt.LeftToRight)
+        self.label_208.setInputMethodHints(QtCore.Qt.ImhNone)
+        self.label_208.setAlignment(QtCore.Qt.AlignCenter)
+        self.label_208.setObjectName("label_208")
 
         ###########################################################
         ######################## Check Box ########################
