@@ -5,7 +5,7 @@ import Fretboard_ui
 
 INSTRUMENT = 'Guitar'
 STRING_NUM = 6
-NOTE_PER_STRING = 12
+NOTE_PER_STRING = 22
 OPEN_STRING_NOTE_NAME = {
     1:{'noteName':'E', 'pitchNum':4},
     2:{'noteName':'B', 'pitchNum':3},
@@ -15,11 +15,11 @@ OPEN_STRING_NOTE_NAME = {
     6:{'noteName':'E', 'pitchNum':2},
 }
 HORIZON_LINES_INDEX_START = 1
-HORIZON_LINES_INDEX_END = 72
+HORIZON_LINES_INDEX_END = 132
 VERTICAL_LINES_INDEX_START = 138
-VERTICAL_LINES_INDEX_END = 202
+VERTICAL_LINES_INDEX_END = 252
 POINTS_INDEX_START = 1
-POINTS_INDEX_END = 72
+POINTS_INDEX_END = 132
 
 
 class ThreeNotes(Fretboard_ui.Fretboard_ui): # Inherit from Fretboard_ui.py
@@ -102,7 +102,6 @@ class ThreeNotes(Fretboard_ui.Fretboard_ui): # Inherit from Fretboard_ui.py
             strings.append(String())
             for note_idx in range(NOTE_PER_STRING):
                 idx = string_idx * NOTE_PER_STRING + note_idx
-                assert(0 <= idx and idx < 72)
                 line = lines[idx]
                 line.point.stringNum = string_idx + 1
                 strings[-1].append(line)
@@ -187,6 +186,10 @@ class ThreeNotes(Fretboard_ui.Fretboard_ui): # Inherit from Fretboard_ui.py
         self.label_202.setText(_translate("MainWindow", "7"))
         self.label_203.setText(_translate("MainWindow", "9"))
         self.label_204.setText(_translate("MainWindow", "12"))
+        self.label_205.setText(_translate("MainWindow", "15"))
+        self.label_206.setText(_translate("MainWindow", "17"))
+        self.label_207.setText(_translate("MainWindow", "19"))
+        self.label_208.setText(_translate("MainWindow", "21"))
         self.label_chord_identifier.setText(_translate("MainWindow", "Chord:"))
         self.label_check_box.setText(_translate("MainWindow", "Mute"))
         self.resetButton.setText(_translate("MainWindow", "Reset"))
