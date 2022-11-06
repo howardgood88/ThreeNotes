@@ -4553,5 +4553,13 @@ class Fretboard_ui(object):
         self.statusbar.setObjectName("statusbar")
         MainWindow.setStatusBar(self.statusbar)
         self.resetButton = QtWidgets.QPushButton(self.centralwidget)
-        self.resetButton.setGeometry(QtCore.QRect(650, 400, 61, 31))
+        self.resetButton.setGeometry(QtCore.QRect(1040, 400, 61, 31))
         self.resetButton.setObjectName("resetButton")
+
+        #############################################################
+        ########################### Mode ############################
+        #############################################################
+
+        self.modeButton = QtWidgets.QPushButton(self.centralwidget)
+        self.modeButton.setGeometry(QtCore.QRect(1030, 85, 71, 31))
+        self.modeButton.setObjectName("modeButton")
