@@ -20,7 +20,7 @@ VERTICAL_LINES_INDEX_START = 138
 VERTICAL_LINES_INDEX_END = 252
 POINTS_INDEX_START = 1
 POINTS_INDEX_END = 132
-
+NOTES = {'C', 'C#', 'D', 'D#', 'E', 'F', 'F#', 'G', 'G#', 'A', 'A#', 'B'}
 
 class ThreeNotes(Fretboard_ui.Fretboard_ui): # Inherit from Fretboard_ui.py
     def __init__(self, MainWindow):
@@ -45,23 +45,32 @@ class ThreeNotes(Fretboard_ui.Fretboard_ui): # Inherit from Fretboard_ui.py
         self.strings = self.string_init(self.Horizon_lines)
         self.textBrowsers = [vars(self)[f'textBrowser_{i}'] for i in range(1, STRING_NUM + 1)]
         self.checkBoxs = [vars(self)[f'checkBox_{i}'] for i in range(1, STRING_NUM + 1)]
+        self.mode = 'Chord Mode'    # Chord Mode / Note Mode
+        # Note Mode
+        self.notes = {note : list() for note in NOTES}
+        self.noteModePressedPoints = list()
 
         self.retranslateUi(MainWindow)
         QtCore.QMetaObject.connectSlotsByName(MainWindow)
 
+        # prepare reset and mode change button
         self.resetButton.clicked.connect(self.resetEvent)
+        self.modeButton.clicked.connect(self.modeChangeEvent)
 
+        # prepare mute check box
         def selectCheckBoxEvent(stringNum):
             self.string_muted[stringNum] = not self.string_muted[stringNum]
             self.checkChord()
-
         self.checkBoxs[0].stateChanged.connect(lambda:selectCheckBoxEvent(stringNum = 1))
         self.checkBoxs[1].stateChanged.connect(lambda:selectCheckBoxEvent(stringNum = 2))
         self.checkBoxs[2].stateChanged.connect(lambda:selectCheckBoxEvent(stringNum = 3))
         self.checkBoxs[3].stateChanged.connect(lambda:selectCheckBoxEvent(stringNum = 4))
         self.checkBoxs[4].stateChanged.connect(lambda:selectCheckBoxEvent(stringNum = 5))
         self.checkBoxs[5].stateChanged.connect(lambda:selectCheckBoxEvent(stringNum = 6))
-        
+
+        # append note to corresponding note list in self.notes
+        for point in self.points:
+            self.notes[point.noteName].append(point)
 
     def setRelationship(self, lines: list, points: list):
         '''
@@ -70,12 +79,26 @@ class ThreeNotes(Fretboard_ui.Fretboard_ui): # Inherit from Fretboard_ui.py
         def mousePress_line(line):
             def mousePressEvent_dec(e):
                 point = line.point
-                self.pressPointHelper(point)
+                if self.mode == 'Chord Mode':
+                    self.pressPointHelper(point)
+                else:   # Note Mode
+                    self.resetEvent()
+                    same_note_points = self.notes[point.noteName]
+                    self.noteModePressedPoints = same_note_points
+                    for same_note_point in same_note_points:
+                        self.pressPointHelper(same_note_point)
             return mousePressEvent_dec
 
         def mousePress_point(point):
             def mousePressEvent_dec(e):
-                self.pressPointHelper(point)
+                if self.mode == 'Chord Mode':
+                    self.pressPointHelper(point)
+                else:   # Note Mode
+                    self.resetEvent()
+                    same_note_points = self.notes[point.noteName]
+                    self.noteModePressedPoints = same_note_points
+                    for same_note_point in same_note_points:
+                        self.pressPointHelper(same_note_point)
             return mousePressEvent_dec
 
         for idx in range(len(lines)):
@@ -114,7 +137,7 @@ class ThreeNotes(Fretboard_ui.Fretboard_ui): # Inherit from Fretboard_ui.py
         stringNum = point.stringNum
         string = self.strings[stringNum - 1]
         if not point.press:
-            if string.pressedPoint:
+            if string.pressedPoint and self.mode != 'Note Mode':
                 string.pressedPoint.hide()
                 string.pressedPoint.press = False
             string.pressedPoint = point
@@ -136,6 +159,8 @@ class ThreeNotes(Fretboard_ui.Fretboard_ui): # Inherit from Fretboard_ui.py
             Check the notes now playing from string six to string one, 
             sort by the distance to root note, and identify the chord by pychord.
         '''
+        if self.mode == 'Note Mode':    # Note Mode don't need to show chord
+            return
         def getNotesPosition(component_notes: list, root_note):
             notes_position = notes_to_positions(component_notes, root_note)
             for idx in range(len(notes_position)):
@@ -143,8 +168,8 @@ class ThreeNotes(Fretboard_ui.Fretboard_ui): # Inherit from Fretboard_ui.py
             return notes_position
 
         root_note = None
-        component_notes = set()          # pychord cannot accept duplicate notes.
-        for idx in range(6, 0, -1):      # Order from string six to one to find root note.
+        component_notes = set()          # pychord cannot accept duplicate notes
+        for idx in range(6, 0, -1):      # Order from string six to one to find root note
             if self.string_muted[idx]:
                 continue
             if root_note == None:
@@ -193,11 +218,14 @@ class ThreeNotes(Fretboard_ui.Fretboard_ui): # Inherit from Fretboard_ui.py
         self.label_chord_identifier.setText(_translate("MainWindow", "Chord:"))
         self.label_check_box.setText(_translate("MainWindow", "Mute"))
         self.resetButton.setText(_translate("MainWindow", "Reset"))
+        self.modeButton.setText(_translate("MainWindow", "Chord Mode"))
 
     def setNoteName(self, stringNum, noteName, pitchNum):
         '''
             Set the note of string "stringNum" by noteName and pitchNum.
         '''
+        if self.mode == 'Note Mode':
+            return
         assert(0 < len(noteName) and len(noteName) < 3)
         s = f'{noteName[0]}'
         if len(noteName) == 2:
@@ -215,15 +243,31 @@ class ThreeNotes(Fretboard_ui.Fretboard_ui): # Inherit from Fretboard_ui.py
             Reset to original state.
         '''
         self.component_notes = {stringNum: val['noteName'] for stringNum, val in OPEN_STRING_NOTE_NAME.items()}
-        for string in self.strings:
-            if string.pressedPoint != None:
-                point = string.pressedPoint
+        if self.mode == 'Chord Mode':
+            for string in self.strings:
+                if string.pressedPoint != None:
+                    point = string.pressedPoint
+                    self.pressPointHelper(point)
+        else:   # Note Mode
+            for point in self.noteModePressedPoints:
                 self.pressPointHelper(point)
+            self.noteModePressedPoints = list()
         for idx in range(STRING_NUM):
             if self.string_muted[idx + 1]:
                 self.checkBoxs[idx].click()
         self.checkChord()
 
+    def modeChangeEvent(self):
+        '''
+            Change between Chord Mode and Note Mode.
+        '''
+        self.resetEvent()
+        _translate = QtCore.QCoreApplication.translate
+        if self.mode == 'Chord Mode':   # to Note Mode
+            self.mode = 'Note Mode'
+        else:   # to Chord Mode
+            self.mode = 'Chord Mode'
+        self.modeButton.setText(_translate("MainWindow", self.mode))
 
 if __name__ == "__main__":
     import sys
