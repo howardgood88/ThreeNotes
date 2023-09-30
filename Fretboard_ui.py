@@ -23,10 +23,10 @@ class Fretboard_ui(object):
         self.centralwidget.setObjectName("centralwidget")
 
         ###############################################################
-        ######################## Chord Textbox ########################
+        ######################## Note Textbox ########################
         ###############################################################
 
-        _class = ConstChordTextbox
+        _class = ConstNoteTextbox
         for i in range(STRING_NUM):
             var = QtWidgets.QTextBrowser(self.centralwidget)
             var.setGeometry(QtCore.QRect(_class.X, _class.startY + _class.stepY * i, _class.width, _class.height))

@@ -27,7 +27,7 @@ class Mode(Enum):
 ######################### UI #########################
 WINDOW_SIZE = (1150, 600)
 
-class ConstChordTextbox:
+class ConstNoteTextbox:
     X = 50
     startY = 160
     stepY = 40
